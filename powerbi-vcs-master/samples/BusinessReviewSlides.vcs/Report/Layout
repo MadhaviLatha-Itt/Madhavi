@@ -1215,6 +1215,7 @@
                 "isHiddenInViewMode": false
               }
             ]
+<<<<<<< HEAD
           },
           "query": {
             "__powerbi-vcs-embedded-json__": {
@@ -1232,12 +1233,98 @@
                       ],
                       "Select": [
                         {
+=======
+          }
+        }
+      ],
+      "config": {
+        "__powerbi-vcs-embedded-json__": {}
+      },
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "ReportSection84d49955d940c5c5ae9c",
+      "displayName": "Reporting Highlights",
+      "filters": {
+        "__powerbi-vcs-embedded-json__": []
+      },
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "x": 63.65422396856581,
+          "y": 53.7524557956778,
+          "z": 0,
+          "width": 1205.1866404715126,
+          "height": 650.6876227897839,
+          "config": {
+            "__powerbi-vcs-embedded-json__": {
+              "name": "4a5967a4caa2c48239aa",
+              "layouts": [
+                {
+                  "id": 0,
+                  "position": {
+                    "x": 63.65422396856581,
+                    "y": 53.7524557956778,
+                    "z": 0,
+                    "width": 1205.1866404715126,
+                    "height": 650.6876227897839
+                  }
+                }
+              ],
+              "singleVisual": {
+                "visualType": "lineChart",
+                "projections": {
+                  "Category": [
+                    {
+                      "queryRef": "Report.Week",
+                      "active": true
+                    }
+                  ],
+                  "Y": [
+                    {
+                      "queryRef": "Sum(Report.Value)"
+                    }
+                  ],
+                  "Series": [
+                    {
+                      "queryRef": "Report.Project Name"
+                    }
+                  ]
+                },
+                "prototypeQuery": {
+                  "Version": 2,
+                  "From": [
+                    {
+                      "Name": "r",
+                      "Entity": "Report",
+                      "Type": 0
+                    }
+                  ],
+                  "Select": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "Week"
+                      },
+                      "Name": "Report.Week"
+                    },
+                    {
+                      "Aggregation": {
+                        "Expression": {
+>>>>>>> master
                           "Column": {
                             "Expression": {
                               "SourceRef": {
                                 "Source": "r"
                               }
                             },
+<<<<<<< HEAD
                             "Property": "Week"
                           },
                           "Name": "Report.Week"
@@ -1280,10 +1367,77 @@
                                     "Expression": {
                                       "SourceRef": {
                                         "Source": "r"
+=======
+                            "Property": "Value"
+                          }
+                        },
+                        "Function": 0
+                      },
+                      "Name": "Sum(Report.Value)"
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "Project Name"
+                      },
+                      "Name": "Report.Project Name"
+                    }
+                  ],
+                  "OrderBy": [
+                    {
+                      "Direction": 1,
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "r"
+                            }
+                          },
+                          "Property": "Week"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "drillFilterOtherVisuals": true,
+                "objects": {
+                  "dataPoint": [
+                    {
+                      "properties": {
+                        "fill": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 5,
+                                  "Percent": -0.25
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "selector": {
+                        "data": [
+                          {
+                            "scopeId": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Report"
+>>>>>>> master
                                       }
                                     },
                                     "Property": "Project Name"
                                   }
+<<<<<<< HEAD
                                 }
                               ],
                               "Values": [
@@ -1398,10 +1552,85 @@
                               "Right": {
                                 "Literal": {
                                   "Value": "'Done'"
+=======
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'SSRS'"
+                                  }
                                 }
                               }
                             }
                           }
+                        ]
+                      }
+                    },
+                    {
+                      "properties": {
+                        "fill": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 9,
+                                  "Percent": 0.2
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "selector": {
+                        "data": [
+                          {
+                            "scopeId": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Report"
+                                      }
+                                    },
+                                    "Property": "Project Name"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'Qlikview'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "categoryAxis": [
+                    {
+                      "properties": {
+                        "axisType": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Categorical'"
+                            }
+                          }
+                        },
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+>>>>>>> master
+                                }
+                              }
+                            }
+                          }
+<<<<<<< HEAD
                         }
                       ]
                     }
@@ -1416,10 +1645,18 @@
                                 "ColorId": 9,
                                 "Percent": -0.25
                               }
+=======
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "11D"
+>>>>>>> master
                             }
                           }
                         }
                       }
+<<<<<<< HEAD
                     },
                     "selector": {
                       "data": [
@@ -1440,10 +1677,25 @@
                               "Right": {
                                 "Literal": {
                                   "Value": "'Waiting'"
+=======
+                    }
+                  ],
+                  "legend": [
+                    {
+                      "properties": {
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+>>>>>>> master
                                 }
                               }
                             }
                           }
+<<<<<<< HEAD
                         }
                       ]
                     }
@@ -1458,10 +1710,25 @@
                                 "ColorId": 3,
                                 "Percent": 0
                               }
+=======
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "12D"
+                            }
+                          }
+                        },
+                        "showTitle": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+>>>>>>> master
                             }
                           }
                         }
                       }
+<<<<<<< HEAD
                     },
                     "selector": {
                       "data": [
@@ -1482,10 +1749,25 @@
                               "Right": {
                                 "Literal": {
                                   "Value": "'In Progress'"
+=======
+                    }
+                  ],
+                  "valueAxis": [
+                    {
+                      "properties": {
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+>>>>>>> master
                                 }
                               }
                             }
                           }
+<<<<<<< HEAD
                         }
                       ]
                     }
@@ -2608,6 +2890,31 @@
                           }
                         }
                       }
+=======
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "11D"
+                            }
+                          }
+                        },
+                        "start": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "0D"
+                            }
+                          }
+                        },
+                        "end": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "90D"
+                            }
+                          }
+                        }
+                      }
+>>>>>>> master
                     }
                   ]
                 }
@@ -2617,7 +2924,11 @@
           "filters": {
             "__powerbi-vcs-embedded-json__": [
               {
+<<<<<<< HEAD
                 "name": "Filterbd22441d0998e24da6a3",
+=======
+                "name": "Filter0328d8cae74eb12a8727",
+>>>>>>> master
                 "expression": {
                   "Column": {
                     "Expression": {
@@ -2672,7 +2983,11 @@
                   ]
                 },
                 "type": "Categorical",
+<<<<<<< HEAD
                 "howCreated": 1,
+=======
+                "howCreated": 0,
+>>>>>>> master
                 "objects": {
                   "general": [
                     {
@@ -2692,6 +3007,7 @@
               }
             ]
           }
+<<<<<<< HEAD
         },
         {
           "x": 198.21522309711284,
@@ -2702,14 +3018,49 @@
           "config": {
             "__powerbi-vcs-embedded-json__": {
               "name": "b5138d0d169d404b83d9",
+=======
+        }
+      ],
+      "config": {
+        "__powerbi-vcs-embedded-json__": {}
+      },
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "ReportSectiond95684b1656da2a6e7dd",
+      "displayName": "Duplicate of Page 1",
+      "filters": {
+        "__powerbi-vcs-embedded-json__": []
+      },
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "x": 263.7270341207349,
+          "y": 127.66404199475065,
+          "z": 0,
+          "width": 806.2992125984251,
+          "height": 508.9763779527559,
+          "config": {
+            "__powerbi-vcs-embedded-json__": {
+              "name": "21cc69e14cb5c12397fa",
+>>>>>>> master
               "layouts": [
                 {
                   "id": 0,
                   "position": {
+<<<<<<< HEAD
                     "x": 198.21522309711284,
                     "y": 127.66404199475065,
                     "z": 1000,
                     "width": 871.8110236220472,
+=======
+                    "x": 263.7270341207349,
+                    "y": 127.66404199475065,
+                    "z": 0,
+                    "width": 806.2992125984251,
+>>>>>>> master
                     "height": 508.9763779527559
                   }
                 }
@@ -2719,6 +3070,7 @@
                 "projections": {
                   "Category": [
                     {
+<<<<<<< HEAD
                       "queryRef": "Report.Week",
                       "active": true
                     }
@@ -2731,6 +3083,20 @@
                   "Series": [
                     {
                       "queryRef": "Report.Attribute"
+=======
+                      "queryRef": "Report.Month",
+                      "active": true
+                    }
+                  ],
+                  "Series": [
+                    {
+                      "queryRef": "Report.Attribute"
+                    }
+                  ],
+                  "Y": [
+                    {
+                      "queryRef": "Sum(Report.Value)"
+>>>>>>> master
                     }
                   ]
                 },
@@ -2744,6 +3110,61 @@
                     }
                   ],
                   "Select": [
+                    {
+<<<<<<< HEAD
+                      "Aggregation": {
+                        "Expression": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "r"
+                              }
+                            },
+                            "Property": "Value"
+                          }
+                        },
+                        "Function": 0
+                      },
+                      "Name": "Sum(Report.Value)"
+=======
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "Month"
+                      },
+                      "Name": "Report.Month"
+>>>>>>> master
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+<<<<<<< HEAD
+                        "Property": "Week"
+                      },
+                      "Name": "Report.Week"
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "Attribute"
+                      },
+                      "Name": "Report.Attribute"
+=======
+                        "Property": "Attribute"
+                      },
+                      "Name": "Report.Attribute"
+                    },
                     {
                       "Aggregation": {
                         "Expression": {
@@ -2759,33 +3180,16 @@
                         "Function": 0
                       },
                       "Name": "Sum(Report.Value)"
-                    },
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "r"
-                          }
-                        },
-                        "Property": "Week"
-                      },
-                      "Name": "Report.Week"
-                    },
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "r"
-                          }
-                        },
-                        "Property": "Attribute"
-                      },
-                      "Name": "Report.Attribute"
+>>>>>>> master
                     }
                   ],
                   "OrderBy": [
                     {
+<<<<<<< HEAD
                       "Direction": 1,
+=======
+                      "Direction": 2,
+>>>>>>> master
                       "Expression": {
                         "Column": {
                           "Expression": {
@@ -2793,14 +3197,21 @@
                               "Source": "r"
                             }
                           },
+<<<<<<< HEAD
                           "Property": "Week"
+=======
+                          "Property": "Month"
+>>>>>>> master
                         }
                       }
                     }
                   ]
                 },
                 "drillFilterOtherVisuals": true,
+<<<<<<< HEAD
                 "hasDefaultSort": true,
+=======
+>>>>>>> master
                 "objects": {
                   "dataPoint": [
                     {
@@ -3148,6 +3559,7 @@
                 "type": "Categorical",
                 "howCreated": 1,
                 "objects": {
+<<<<<<< HEAD
                   "general": [
                     {
                       "properties": {
@@ -3327,6 +3739,33 @@
           "z": 1000,
           "width": 776.0629921259842,
           "height": 470.34120734908134,
+=======
+                  "general": [
+                    {
+                      "properties": {
+                        "isInvertedSelectionMode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "isHiddenInViewMode": false
+              }
+            ]
+          }
+        },
+        {
+          "x": 198.21522309711284,
+          "y": 127.66404199475065,
+          "z": 1000,
+          "width": 871.8110236220472,
+          "height": 508.9763779527559,
+>>>>>>> master
           "config": {
             "__powerbi-vcs-embedded-json__": {
               "name": "b5138d0d169d404b83d9",
@@ -3334,15 +3773,589 @@
                 {
                   "id": 0,
                   "position": {
+<<<<<<< HEAD
                     "x": 327.5590551181102,
                     "y": 230.13123359580052,
                     "z": 1000,
                     "width": 776.0629921259842,
                     "height": 470.34120734908134
+=======
+                    "x": 198.21522309711284,
+                    "y": 127.66404199475065,
+                    "z": 1000,
+                    "width": 871.8110236220472,
+                    "height": 508.9763779527559
+>>>>>>> master
                   }
                 }
               ],
               "singleVisual": {
+<<<<<<< HEAD
+                "visualType": "stackedAreaChart",
+=======
+                "visualType": "areaChart",
+>>>>>>> master
+                "projections": {
+                  "Category": [
+                    {
+                      "queryRef": "Report.Week",
+                      "active": true
+                    }
+                  ],
+                  "Y": [
+                    {
+                      "queryRef": "Sum(Report.Value)"
+                    }
+                  ],
+                  "Series": [
+                    {
+<<<<<<< HEAD
+                      "queryRef": "Report.Project Name"
+=======
+                      "queryRef": "Report.Attribute"
+>>>>>>> master
+                    }
+                  ]
+                },
+                "prototypeQuery": {
+                  "Version": 2,
+                  "From": [
+                    {
+                      "Name": "r",
+                      "Entity": "Report",
+                      "Type": 0
+                    }
+                  ],
+                  "Select": [
+                    {
+<<<<<<< HEAD
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "Week"
+                      },
+                      "Name": "Report.Week"
+                    },
+                    {
+=======
+>>>>>>> master
+                      "Aggregation": {
+                        "Expression": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "r"
+                              }
+                            },
+                            "Property": "Value"
+                          }
+                        },
+                        "Function": 0
+                      },
+                      "Name": "Sum(Report.Value)"
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+<<<<<<< HEAD
+                        "Property": "Project Name"
+                      },
+                      "Name": "Report.Project Name"
+=======
+                        "Property": "Week"
+                      },
+                      "Name": "Report.Week"
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "r"
+                          }
+                        },
+                        "Property": "Attribute"
+                      },
+                      "Name": "Report.Attribute"
+>>>>>>> master
+                    }
+                  ],
+                  "OrderBy": [
+                    {
+                      "Direction": 1,
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "r"
+                            }
+                          },
+                          "Property": "Week"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "drillFilterOtherVisuals": true,
+                "hasDefaultSort": true,
+                "objects": {
+                  "dataPoint": [
+                    {
+                      "properties": {
+                        "fill": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 5,
+                                  "Percent": 0.4
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "selector": {
+                        "data": [
+                          {
+                            "scopeId": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Report"
+                                      }
+                                    },
+                                    "Property": "Attribute"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'Done'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "properties": {
+                        "fill": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 9,
+                                  "Percent": 0.4
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "selector": {
+                        "data": [
+                          {
+                            "scopeId": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Report"
+                                      }
+                                    },
+                                    "Property": "Attribute"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'Waiting'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "properties": {
+                        "fill": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 3,
+                                  "Percent": 0.4
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "selector": {
+                        "data": [
+                          {
+                            "scopeId": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Report"
+                                      }
+                                    },
+                                    "Property": "Attribute"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'In Progress'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "properties": {
+                        "fill": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 2,
+                                  "Percent": 0.4
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "selector": {
+                        "data": [
+                          {
+                            "scopeId": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Entity": "Report"
+                                      }
+                                    },
+                                    "Property": "Attribute"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'Backlog'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "labels": [
+                    {
+                      "properties": {
+                        "show": {
+                          "expr": {
+                            "Literal": {
+<<<<<<< HEAD
+                              "Value": "false"
+=======
+                              "Value": "true"
+>>>>>>> master
+                            }
+                          }
+                        },
+                        "color": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "categoryAxis": [
+                    {
+                      "properties": {
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "10D"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "valueAxis": [
+                    {
+                      "properties": {
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "11D"
+                            }
+                          }
+                        },
+                        "gridlineColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "legend": [
+                    {
+                      "properties": {
+                        "showTitle": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        },
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "filters": {
+            "__powerbi-vcs-embedded-json__": [
+              {
+                "name": "Filterbd22441d0998e24da6a3",
+                "expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Report"
+                      }
+                    },
+                    "Property": "Project Name"
+                  }
+                },
+                "filter": {
+                  "Version": 2,
+                  "From": [
+                    {
+                      "Name": "r",
+                      "Entity": "Report",
+                      "Type": 0
+                    }
+                  ],
+                  "Where": [
+                    {
+                      "Condition": {
+                        "Not": {
+                          "Expression": {
+                            "In": {
+                              "Expressions": [
+                                {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "r"
+                                      }
+                                    },
+                                    "Property": "Project Name"
+                                  }
+                                }
+                              ],
+                              "Values": [
+                                [
+                                  {
+                                    "Literal": {
+                                      "Value": "'DBA'"
+                                    }
+                                  }
+                                ]
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "type": "Categorical",
+<<<<<<< HEAD
+                "howCreated": 0,
+=======
+                "howCreated": 1,
+>>>>>>> master
+                "objects": {
+                  "general": [
+                    {
+                      "properties": {
+                        "isInvertedSelectionMode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "isHiddenInViewMode": false
+              }
+            ]
+          }
+        }
+      ],
+      "config": {
+        "__powerbi-vcs-embedded-json__": {}
+      },
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720
+    },
+    {
+<<<<<<< HEAD
+      "name": "ReportSectione23fcd9bfd1690f59a90",
+      "displayName": "Page 4",
+      "filters": {
+        "__powerbi-vcs-embedded-json__": []
+      },
+      "ordinal": 6,
+      "visualContainers": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "width": 639.3713163064832,
+          "height": 305.5402750491159,
+          "config": {
+            "__powerbi-vcs-embedded-json__": {
+              "name": "74d08fbd22af4137699e",
+=======
+      "name": "ReportSection11b63e31941c34c0a6b8",
+      "displayName": "Duplicate of Duplicate of Page 1",
+      "filters": {
+        "__powerbi-vcs-embedded-json__": []
+      },
+      "ordinal": 4,
+      "visualContainers": [
+        {
+          "x": 327.5590551181102,
+          "y": 230.13123359580052,
+          "z": 1000,
+          "width": 776.0629921259842,
+          "height": 470.34120734908134,
+          "config": {
+            "__powerbi-vcs-embedded-json__": {
+              "name": "b5138d0d169d404b83d9",
+>>>>>>> master
+              "layouts": [
+                {
+                  "id": 0,
+                  "position": {
+<<<<<<< HEAD
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "width": 639.3713163064832,
+                    "height": 305.5402750491159
+=======
+                    "x": 327.5590551181102,
+                    "y": 230.13123359580052,
+                    "z": 1000,
+                    "width": 776.0629921259842,
+                    "height": 470.34120734908134
+>>>>>>> master
+                  }
+                }
+              ],
+              "singleVisual": {
+<<<<<<< HEAD
+                "visualType": "clusteredColumnChart",
+                "projections": {
+                  "Y": [
+                    {
+                      "queryRef": "Sum(Sheet1.Number Of Participants)"
+                    }
+                  ],
+                  "Category": [
+                    {
+                      "queryRef": "Sheet1.Date",
+                      "active": true
+=======
                 "visualType": "stackedAreaChart",
                 "projections": {
                   "Category": [
@@ -3359,6 +4372,7 @@
                   "Series": [
                     {
                       "queryRef": "Report.Project Name"
+>>>>>>> master
                     }
                   ]
                 },
@@ -3366,13 +4380,20 @@
                   "Version": 2,
                   "From": [
                     {
+<<<<<<< HEAD
+                      "Name": "s",
+                      "Entity": "Sheet1",
+=======
                       "Name": "r",
                       "Entity": "Report",
+>>>>>>> master
                       "Type": 0
                     }
                   ],
                   "Select": [
                     {
+<<<<<<< HEAD
+=======
                       "Column": {
                         "Expression": {
                           "SourceRef": {
@@ -3384,11 +4405,55 @@
                       "Name": "Report.Week"
                     },
                     {
+>>>>>>> master
                       "Aggregation": {
                         "Expression": {
                           "Column": {
                             "Expression": {
                               "SourceRef": {
+<<<<<<< HEAD
+                                "Source": "s"
+                              }
+                            },
+                            "Property": "Number Of Participants"
+                          }
+                        },
+                        "Function": 0
+                      },
+                      "Name": "Sum(Sheet1.Number Of Participants)"
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s"
+                          }
+                        },
+                        "Property": "Date"
+                      },
+                      "Name": "Sheet1.Date"
+                    }
+                  ],
+                  "OrderBy": [
+                    {
+                      "Direction": 1,
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "s"
+                            }
+                          },
+                          "Property": "Date"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "drillFilterOtherVisuals": true,
+                "hasDefaultSort": true,
+                "objects": {
+=======
                                 "Source": "r"
                               }
                             },
@@ -3600,13 +4665,18 @@
                       }
                     }
                   ],
+>>>>>>> master
                   "labels": [
                     {
                       "properties": {
                         "show": {
                           "expr": {
                             "Literal": {
+<<<<<<< HEAD
+                              "Value": "true"
+=======
                               "Value": "false"
+>>>>>>> master
                             }
                           }
                         },
@@ -3621,6 +4691,16 @@
                               }
                             }
                           }
+<<<<<<< HEAD
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "11D"
+                            }
+                          }
+=======
+>>>>>>> master
                         }
                       }
                     }
@@ -3628,6 +4708,16 @@
                   "categoryAxis": [
                     {
                       "properties": {
+<<<<<<< HEAD
+                        "axisType": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Categorical'"
+                            }
+                          }
+                        },
+=======
+>>>>>>> master
                         "labelColor": {
                           "solid": {
                             "color": {
@@ -3646,6 +4736,36 @@
                               "Value": "10D"
                             }
                           }
+<<<<<<< HEAD
+                        },
+                        "concatenateLabels": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        },
+                        "showAxisTitle": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "general": [
+                    {
+                      "properties": {
+                        "responsive": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+=======
+>>>>>>> master
                         }
                       }
                     }
@@ -3665,6 +4785,26 @@
                             }
                           }
                         },
+<<<<<<< HEAD
+                        "gridlineShow": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "12D"
+                            }
+                          }
+                        },
+                        "titleFontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "14D"
+=======
                         "fontSize": {
                           "expr": {
                             "Literal": {
@@ -3766,6 +4906,7 @@
                                   }
                                 ]
                               ]
+>>>>>>> master
                             }
                           }
                         }
@@ -3773,6 +4914,13 @@
                     }
                   ]
                 },
+<<<<<<< HEAD
+                "vcObjects": {
+                  "general": [
+                    {
+                      "properties": {
+                        "keepLayerOrder": {
+=======
                 "type": "Categorical",
                 "howCreated": 0,
                 "objects": {
@@ -3780,6 +4928,7 @@
                     {
                       "properties": {
                         "isInvertedSelectionMode": {
+>>>>>>> master
                           "expr": {
                             "Literal": {
                               "Value": "true"
@@ -3789,272 +4938,19 @@
                       }
                     }
                   ]
-                },
-                "isHiddenInViewMode": false
-              }
-            ]
-          }
-        }
-      ],
-      "config": {
-        "__powerbi-vcs-embedded-json__": {}
-      },
-      "displayOption": 1,
-      "width": 1280,
-      "height": 720
-    },
-    {
-      "name": "ReportSectione23fcd9bfd1690f59a90",
-      "displayName": "Page 4",
-      "filters": {
-        "__powerbi-vcs-embedded-json__": []
-      },
-      "ordinal": 6,
-      "visualContainers": [
-        {
-          "x": 0,
-          "y": 0,
-          "z": 0,
-          "width": 639.3713163064832,
-          "height": 305.5402750491159,
-          "config": {
-            "__powerbi-vcs-embedded-json__": {
-              "name": "74d08fbd22af4137699e",
-              "layouts": [
-                {
-                  "id": 0,
-                  "position": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0,
-                    "width": 639.3713163064832,
-                    "height": 305.5402750491159
-                  }
-                }
-              ],
-              "singleVisual": {
-                "visualType": "clusteredColumnChart",
-                "projections": {
-                  "Y": [
-                    {
-                      "queryRef": "Sum(Sheet1.Number Of Participants)"
-                    }
-                  ],
-                  "Category": [
-                    {
-                      "queryRef": "Sheet1.Date",
-                      "active": true
-                    }
-                  ]
-                },
-                "prototypeQuery": {
-                  "Version": 2,
-                  "From": [
-                    {
-                      "Name": "s",
-                      "Entity": "Sheet1",
-                      "Type": 0
-                    }
-                  ],
-                  "Select": [
-                    {
-                      "Aggregation": {
-                        "Expression": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "s"
-                              }
-                            },
-                            "Property": "Number Of Participants"
-                          }
-                        },
-                        "Function": 0
-                      },
-                      "Name": "Sum(Sheet1.Number Of Participants)"
-                    },
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "s"
-                          }
-                        },
-                        "Property": "Date"
-                      },
-                      "Name": "Sheet1.Date"
-                    }
-                  ],
-                  "OrderBy": [
-                    {
-                      "Direction": 1,
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "s"
-                            }
-                          },
-                          "Property": "Date"
-                        }
-                      }
-                    }
-                  ]
-                },
-                "drillFilterOtherVisuals": true,
-                "hasDefaultSort": true,
-                "objects": {
-                  "labels": [
-                    {
-                      "properties": {
-                        "show": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
-                            }
-                          }
-                        },
-                        "color": {
-                          "solid": {
-                            "color": {
-                              "expr": {
-                                "ThemeDataColor": {
-                                  "ColorId": 1,
-                                  "Percent": 0
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "fontSize": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "11D"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "categoryAxis": [
-                    {
-                      "properties": {
-                        "axisType": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Categorical'"
-                            }
-                          }
-                        },
-                        "labelColor": {
-                          "solid": {
-                            "color": {
-                              "expr": {
-                                "ThemeDataColor": {
-                                  "ColorId": 1,
-                                  "Percent": 0
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "fontSize": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "10D"
-                            }
-                          }
-                        },
-                        "concatenateLabels": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "false"
-                            }
-                          }
-                        },
-                        "showAxisTitle": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "general": [
-                    {
-                      "properties": {
-                        "responsive": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "valueAxis": [
-                    {
-                      "properties": {
-                        "labelColor": {
-                          "solid": {
-                            "color": {
-                              "expr": {
-                                "ThemeDataColor": {
-                                  "ColorId": 1,
-                                  "Percent": 0
-                                }
-                              }
-                            }
-                          }
-                        },
-                        "gridlineShow": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
-                            }
-                          }
-                        },
-                        "fontSize": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "12D"
-                            }
-                          }
-                        },
-                        "titleFontSize": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "14D"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                },
-                "vcObjects": {
-                  "general": [
-                    {
-                      "properties": {
-                        "keepLayerOrder": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
+<<<<<<< HEAD
                 }
               }
             }
           },
           "filters": {
             "__powerbi-vcs-embedded-json__": []
+=======
+                },
+                "isHiddenInViewMode": false
+              }
+            ]
+>>>>>>> master
           },
           "query": {
             "__powerbi-vcs-embedded-json__": {
@@ -4065,32 +4961,63 @@
                       "Version": 2,
                       "From": [
                         {
+<<<<<<< HEAD
                           "Name": "s",
                           "Entity": "Sheet1",
+=======
+                          "Name": "r",
+                          "Entity": "Report",
+>>>>>>> master
                           "Type": 0
                         }
                       ],
                       "Select": [
                         {
+<<<<<<< HEAD
+=======
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "r"
+                              }
+                            },
+                            "Property": "Week"
+                          },
+                          "Name": "Report.Week"
+                        },
+                        {
+>>>>>>> master
                           "Aggregation": {
                             "Expression": {
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
+<<<<<<< HEAD
                                     "Source": "s"
                                   }
                                 },
                                 "Property": "Number Of Participants"
+=======
+                                    "Source": "r"
+                                  }
+                                },
+                                "Property": "Value"
+>>>>>>> master
                               }
                             },
                             "Function": 0
                           },
+<<<<<<< HEAD
                           "Name": "Sum(Sheet1.Number Of Participants)"
+=======
+                          "Name": "Sum(Report.Value)"
+>>>>>>> master
                         },
                         {
                           "Column": {
                             "Expression": {
                               "SourceRef": {
+<<<<<<< HEAD
                                 "Source": "s"
                               }
                             },
@@ -4193,10 +5120,49 @@
                               "ThemeDataColor": {
                                 "ColorId": 1,
                                 "Percent": 0
+=======
+                                "Source": "r"
+                              }
+                            },
+                            "Property": "Project Name"
+                          },
+                          "Name": "Report.Project Name"
+                        }
+                      ],
+                      "Where": [
+                        {
+                          "Condition": {
+                            "Not": {
+                              "Expression": {
+                                "In": {
+                                  "Expressions": [
+                                    {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "r"
+                                          }
+                                        },
+                                        "Property": "Project Name"
+                                      }
+                                    }
+                                  ],
+                                  "Values": [
+                                    [
+                                      {
+                                        "Literal": {
+                                          "Value": "'DBA'"
+                                        }
+                                      }
+                                    ]
+                                  ]
+                                }
+>>>>>>> master
                               }
                             }
                           }
                         }
+<<<<<<< HEAD
                       },
                       "fontSize": {
                         "expr": {
@@ -4372,11 +5338,65 @@
                         }
                       },
                       "Property": "Date"
+=======
+                      ],
+                      "OrderBy": [
+                        {
+                          "Direction": 1,
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "r"
+                                }
+                              },
+                              "Property": "Week"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "Binding": {
+                      "Primary": {
+                        "Groupings": [
+                          {
+                            "Projections": [
+                              0,
+                              1
+                            ]
+                          }
+                        ]
+                      },
+                      "Secondary": {
+                        "Groupings": [
+                          {
+                            "Projections": [
+                              2
+                            ]
+                          }
+                        ]
+                      },
+                      "DataReduction": {
+                        "DataVolume": 4,
+                        "Primary": {
+                          "Window": {
+                            "Count": 200
+                          }
+                        },
+                        "Secondary": {
+                          "Top": {
+                            "Count": 60
+                          }
+                        }
+                      },
+                      "Version": 1
+>>>>>>> master
                     }
                   }
                 }
               ]
             }
+<<<<<<< HEAD
           }
         },
         {
@@ -4489,10 +5509,136 @@
                                 "ThemeDataColor": {
                                   "ColorId": 1,
                                   "Percent": 0
+=======
+          },
+          "dataTransforms": {
+            "__powerbi-vcs-embedded-json__": {
+              "objects": {
+                "dataPoint": [
+                  {
+                    "properties": {
+                      "fill": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 5,
+                                "Percent": 0.4
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "selector": {
+                      "data": [
+                        {
+                          "scopeId": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Report"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Done'"
                                 }
                               }
                             }
                           }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "properties": {
+                      "fill": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 9,
+                                "Percent": 0.4
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "selector": {
+                      "data": [
+                        {
+                          "scopeId": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Report"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Waiting'"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "properties": {
+                      "fill": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 3,
+                                "Percent": 0.4
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "selector": {
+                      "data": [
+                        {
+                          "scopeId": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Report"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'In Progress'"
+>>>>>>> master
+                                }
+                              }
+                            }
+                          }
+<<<<<<< HEAD
                         },
                         "fontSize": {
                           "expr": {
@@ -4521,10 +5667,51 @@
                                 "ThemeDataColor": {
                                   "ColorId": 1,
                                   "Percent": 0
+=======
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "properties": {
+                      "fill": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 2,
+                                "Percent": 0.4
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "selector": {
+                      "data": [
+                        {
+                          "scopeId": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Report"
+                                    }
+                                  },
+                                  "Property": "Attribute"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Backlog'"
+>>>>>>> master
                                 }
                               }
                             }
                           }
+<<<<<<< HEAD
                         },
                         "fontSize": {
                           "expr": {
@@ -4544,11 +5731,37 @@
                           "expr": {
                             "Literal": {
                               "Value": "true"
+=======
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "labels": [
+                  {
+                    "properties": {
+                      "show": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "false"
+                          }
+                        }
+                      },
+                      "color": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 1,
+                                "Percent": 0
+                              }
+>>>>>>> master
                             }
                           }
                         }
                       }
                     }
+<<<<<<< HEAD
                   ],
                   "general": [
                     {
@@ -4738,10 +5951,390 @@
                         "expr": {
                           "Literal": {
                             "Value": "11D"
+=======
+                  }
+                ],
+                "categoryAxis": [
+                  {
+                    "properties": {
+                      "labelColor": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 1,
+                                "Percent": 0
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "fontSize": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "10D"
                           }
                         }
                       }
                     }
+                  }
+                ],
+                "valueAxis": [
+                  {
+                    "properties": {
+                      "labelColor": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 1,
+                                "Percent": 0
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "fontSize": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "11D"
+                          }
+                        }
+                      },
+                      "gridlineColor": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 1,
+                                "Percent": 0
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ],
+                "legend": [
+                  {
+                    "properties": {
+                      "showTitle": {
+                        "expr": {
+                          "Literal": {
+                            "Value": "false"
+                          }
+                        }
+                      },
+                      "labelColor": {
+                        "solid": {
+                          "color": {
+                            "expr": {
+                              "ThemeDataColor": {
+                                "ColorId": 1,
+                                "Percent": 0
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "projectionOrdering": {
+                "Category": [
+                  0
+                ],
+                "Y": [
+                  1
+                ],
+                "Series": [
+                  2
+                ]
+              },
+              "projectionActiveItems": {
+                "Category": [
+                  {
+                    "queryRef": "Report.Week",
+                    "suppressConcat": false
+                  }
+                ]
+              },
+              "queryMetadata": {
+                "Select": [
+                  {
+                    "Restatement": "Week",
+                    "Name": "Report.Week",
+                    "Type": 2048
+                  },
+                  {
+                    "Restatement": "Value",
+                    "Name": "Sum(Report.Value)",
+                    "Type": 1,
+                    "Format": "0"
+                  },
+                  {
+                    "Restatement": "Project Name",
+                    "Name": "Report.Project Name",
+                    "Type": 2048
+                  }
+                ],
+                "Filters": [
+                  {
+                    "type": 0,
+                    "expression": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Report"
+                          }
+                        },
+                        "Property": "Project Name"
+                      }
+                    }
+                  }
+                ]
+              },
+              "visualElements": [
+                {
+                  "DataRoles": [
+                    {
+                      "Name": "Category",
+                      "Projection": 0,
+                      "isActive": true
+                    },
+                    {
+                      "Name": "Y",
+                      "Projection": 1,
+                      "isActive": false
+                    },
+                    {
+                      "Name": "Series",
+                      "Projection": 2,
+                      "isActive": false
+                    }
+                  ]
+                }
+              ],
+              "selects": [
+                {
+                  "displayName": "Week",
+                  "queryName": "Report.Week",
+                  "roles": {
+                    "Category": true
+                  },
+                  "sort": 1,
+                  "sortOrder": 0,
+                  "type": {
+                    "category": null,
+                    "underlyingType": 1
+                  },
+                  "expr": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Report"
+                        }
+                      },
+                      "Property": "Week"
+                    }
+                  }
+                },
+                {
+                  "displayName": "Value",
+                  "format": "0",
+                  "queryName": "Sum(Report.Value)",
+                  "roles": {
+                    "Y": true
+                  },
+                  "type": {
+                    "category": null,
+                    "underlyingType": 259
+                  },
+                  "expr": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Report"
+                            }
+                          },
+                          "Property": "Value"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                },
+                {
+                  "displayName": "Project Name",
+                  "queryName": "Report.Project Name",
+                  "roles": {
+                    "Series": true
+                  },
+                  "type": {
+                    "category": null,
+                    "underlyingType": 1
+                  },
+                  "expr": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Report"
+                        }
+                      },
+                      "Property": "Project Name"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "config": {
+        "__powerbi-vcs-embedded-json__": {}
+      },
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "ReportSectione23fcd9bfd1690f59a90",
+      "displayName": "Page 4",
+      "filters": {
+        "__powerbi-vcs-embedded-json__": []
+      },
+      "ordinal": 5,
+      "visualContainers": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "width": 639.3713163064832,
+          "height": 305.5402750491159,
+          "config": {
+            "__powerbi-vcs-embedded-json__": {
+              "name": "74d08fbd22af4137699e",
+              "layouts": [
+                {
+                  "id": 0,
+                  "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0,
+                    "width": 639.3713163064832,
+                    "height": 305.5402750491159
+                  }
+                }
+              ],
+              "singleVisual": {
+                "visualType": "clusteredColumnChart",
+                "projections": {
+                  "Y": [
+                    {
+                      "queryRef": "Sum(Sheet1.Number Of Participants)"
+                    }
+                  ],
+                  "Category": [
+                    {
+                      "queryRef": "Sheet1.Date",
+                      "active": true
+                    }
+                  ]
+                },
+                "prototypeQuery": {
+                  "Version": 2,
+                  "From": [
+                    {
+                      "Name": "s",
+                      "Entity": "Sheet1",
+                      "Type": 0
+                    }
+                  ],
+                  "Select": [
+                    {
+                      "Aggregation": {
+                        "Expression": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "s"
+                              }
+                            },
+                            "Property": "Number Of Participants"
+                          }
+                        },
+                        "Function": 0
+                      },
+                      "Name": "Sum(Sheet1.Number Of Participants)"
+                    },
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s"
+                          }
+                        },
+                        "Property": "Date"
+                      },
+                      "Name": "Sheet1.Date"
+                    }
+                  ],
+                  "OrderBy": [
+                    {
+                      "Direction": 1,
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "s"
+                            }
+                          },
+                          "Property": "Date"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "drillFilterOtherVisuals": true,
+                "hasDefaultSort": true,
+                "objects": {
+                  "labels": [
+                    {
+                      "properties": {
+                        "show": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        },
+                        "color": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "11D"
+                            }
+>>>>>>> master
+                          }
+                        }
+                      }
+                    }
+<<<<<<< HEAD
                   }
                 ],
                 "categoryAxis": [
@@ -4784,10 +6377,55 @@
                         "expr": {
                           "Literal": {
                             "Value": "true"
+=======
+                  ],
+                  "categoryAxis": [
+                    {
+                      "properties": {
+                        "axisType": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Categorical'"
+                            }
+                          }
+                        },
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "10D"
+                            }
+                          }
+                        },
+                        "concatenateLabels": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        },
+                        "showAxisTitle": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+>>>>>>> master
                           }
                         }
                       }
                     }
+<<<<<<< HEAD
                   }
                 ],
                 "general": [
@@ -4797,10 +6435,22 @@
                         "expr": {
                           "Literal": {
                             "Value": "true"
+=======
+                  ],
+                  "general": [
+                    {
+                      "properties": {
+                        "responsive": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+>>>>>>> master
                           }
                         }
                       }
                     }
+<<<<<<< HEAD
                   }
                 ],
                 "valueAxis": [
@@ -4951,18 +6601,97 @@
           "x": 618.1532416502946,
           "y": 318.2711198428291,
           "z": 2000,
+=======
+                  ],
+                  "valueAxis": [
+                    {
+                      "properties": {
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "gridlineShow": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "12D"
+                            }
+                          }
+                        },
+                        "titleFontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "14D"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "vcObjects": {
+                  "general": [
+                    {
+                      "properties": {
+                        "keepLayerOrder": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "filters": {
+            "__powerbi-vcs-embedded-json__": []
+          }
+        },
+        {
+          "x": 0,
+          "y": 318.2711198428291,
+          "z": 1000,
+>>>>>>> master
           "width": 662.0039292730844,
           "height": 401.7288801571709,
           "config": {
             "__powerbi-vcs-embedded-json__": {
+<<<<<<< HEAD
               "name": "db73f66500c0bda73c37",
+=======
+              "name": "d71902d0d28f2f3a3561",
+>>>>>>> master
               "layouts": [
                 {
                   "id": 0,
                   "position": {
+<<<<<<< HEAD
                     "x": 618.1532416502946,
                     "y": 318.2711198428291,
                     "z": 2000,
+=======
+                    "x": 0,
+                    "y": 318.2711198428291,
+                    "z": 1000,
+>>>>>>> master
                     "width": 662.0039292730844,
                     "height": 401.7288801571709
                   }
@@ -4973,12 +6702,20 @@
                 "projections": {
                   "Y": [
                     {
+<<<<<<< HEAD
                       "queryRef": "CountNonNull(Sheet1 (2).MnofPar)"
+=======
+                      "queryRef": "Sum(Sheet1 (2).Number Of Participants)"
+>>>>>>> master
                     }
                   ],
                   "Category": [
                     {
+<<<<<<< HEAD
                       "queryRef": "Sheet1 (2).Mdate",
+=======
+                      "queryRef": "Sheet1 (2).Date",
+>>>>>>> master
                       "active": true
                     }
                   ]
@@ -5000,9 +6737,15 @@
                             "Source": "s1"
                           }
                         },
+<<<<<<< HEAD
                         "Property": "Mdate"
                       },
                       "Name": "Sheet1 (2).Mdate"
+=======
+                        "Property": "Date"
+                      },
+                      "Name": "Sheet1 (2).Date"
+>>>>>>> master
                     },
                     {
                       "Aggregation": {
@@ -5013,16 +6756,25 @@
                                 "Source": "s1"
                               }
                             },
+<<<<<<< HEAD
                             "Property": "MnofPar"
+=======
+                            "Property": "Number Of Participants"
+>>>>>>> master
                           }
                         },
                         "Function": 0
                       },
+<<<<<<< HEAD
                       "Name": "CountNonNull(Sheet1 (2).MnofPar)"
+=======
+                      "Name": "Sum(Sheet1 (2).Number Of Participants)"
+>>>>>>> master
                     }
                   ],
                   "OrderBy": [
                     {
+<<<<<<< HEAD
                       "Direction": 2,
                       "Expression": {
                         "Aggregation": {
@@ -5037,6 +6789,17 @@
                             }
                           },
                           "Function": 0
+=======
+                      "Direction": 1,
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "s1"
+                            }
+                          },
+                          "Property": "Date"
+>>>>>>> master
                         }
                       }
                     }
@@ -5196,6 +6959,7 @@
           },
           "filters": {
             "__powerbi-vcs-embedded-json__": []
+<<<<<<< HEAD
           },
           "query": {
             "__powerbi-vcs-embedded-json__": {
@@ -5213,12 +6977,77 @@
                       ],
                       "Select": [
                         {
+=======
+          }
+        },
+        {
+          "x": 618.1532416502946,
+          "y": 318.2711198428291,
+          "z": 2000,
+          "width": 662.0039292730844,
+          "height": 401.7288801571709,
+          "config": {
+            "__powerbi-vcs-embedded-json__": {
+              "name": "db73f66500c0bda73c37",
+              "layouts": [
+                {
+                  "id": 0,
+                  "position": {
+                    "x": 618.1532416502946,
+                    "y": 318.2711198428291,
+                    "z": 2000,
+                    "width": 662.0039292730844,
+                    "height": 401.7288801571709
+                  }
+                }
+              ],
+              "singleVisual": {
+                "visualType": "clusteredColumnChart",
+                "projections": {
+                  "Y": [
+                    {
+                      "queryRef": "CountNonNull(Sheet1 (2).MnofPar)"
+                    }
+                  ],
+                  "Category": [
+                    {
+                      "queryRef": "Sheet1 (2).Mdate",
+                      "active": true
+                    }
+                  ]
+                },
+                "prototypeQuery": {
+                  "Version": 2,
+                  "From": [
+                    {
+                      "Name": "s1",
+                      "Entity": "Sheet1 (2)",
+                      "Type": 0
+                    }
+                  ],
+                  "Select": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s1"
+                          }
+                        },
+                        "Property": "Mdate"
+                      },
+                      "Name": "Sheet1 (2).Mdate"
+                    },
+                    {
+                      "Aggregation": {
+                        "Expression": {
+>>>>>>> master
                           "Column": {
                             "Expression": {
                               "SourceRef": {
                                 "Source": "s1"
                               }
                             },
+<<<<<<< HEAD
                             "Property": "Mdate"
                           },
                           "Name": "Sheet1 (2).Mdate"
@@ -5316,10 +7145,72 @@
                         "expr": {
                           "Literal": {
                             "Value": "11D"
+=======
+                            "Property": "MnofPar"
+                          }
+                        },
+                        "Function": 0
+                      },
+                      "Name": "CountNonNull(Sheet1 (2).MnofPar)"
+                    }
+                  ],
+                  "OrderBy": [
+                    {
+                      "Direction": 2,
+                      "Expression": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "s1"
+                                }
+                              },
+                              "Property": "MnofPar"
+                            }
+                          },
+                          "Function": 0
+                        }
+                      }
+                    }
+                  ]
+                },
+                "drillFilterOtherVisuals": true,
+                "hasDefaultSort": true,
+                "objects": {
+                  "labels": [
+                    {
+                      "properties": {
+                        "show": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        },
+                        "color": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "11D"
+                            }
+>>>>>>> master
                           }
                         }
                       }
                     }
+<<<<<<< HEAD
                   }
                 ],
                 "categoryAxis": [
@@ -5362,10 +7253,55 @@
                         "expr": {
                           "Literal": {
                             "Value": "true"
+=======
+                  ],
+                  "categoryAxis": [
+                    {
+                      "properties": {
+                        "axisType": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Categorical'"
+                            }
+                          }
+                        },
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "12D"
+                            }
+                          }
+                        },
+                        "concatenateLabels": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        },
+                        "showAxisTitle": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+>>>>>>> master
                           }
                         }
                       }
                     }
+<<<<<<< HEAD
                   }
                 ],
                 "general": [
@@ -5375,10 +7311,22 @@
                         "expr": {
                           "Literal": {
                             "Value": "true"
+=======
+                  ],
+                  "general": [
+                    {
+                      "properties": {
+                        "responsive": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+>>>>>>> master
                           }
                         }
                       }
                     }
+<<<<<<< HEAD
                   }
                 ],
                 "valueAxis": [
@@ -5414,10 +7362,48 @@
                         "expr": {
                           "Literal": {
                             "Value": "14D"
+=======
+                  ],
+                  "valueAxis": [
+                    {
+                      "properties": {
+                        "labelColor": {
+                          "solid": {
+                            "color": {
+                              "expr": {
+                                "ThemeDataColor": {
+                                  "ColorId": 1,
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "gridlineShow": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        },
+                        "fontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "12D"
+                            }
+                          }
+                        },
+                        "titleFontSize": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "14D"
+                            }
+>>>>>>> master
                           }
                         }
                       }
                     }
+<<<<<<< HEAD
                   }
                 ]
               },
@@ -5521,6 +7507,30 @@
                 }
               ]
             }
+=======
+                  ]
+                },
+                "vcObjects": {
+                  "general": [
+                    {
+                      "properties": {
+                        "keepLayerOrder": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "filters": {
+            "__powerbi-vcs-embedded-json__": []
+>>>>>>> master
           }
         }
       ],
@@ -5537,7 +7547,11 @@
       "filters": {
         "__powerbi-vcs-embedded-json__": []
       },
+<<<<<<< HEAD
       "ordinal": 7,
+=======
+      "ordinal": 6,
+>>>>>>> master
       "visualContainers": [],
       "config": {
         "__powerbi-vcs-embedded-json__": {}
@@ -5562,7 +7576,11 @@
           "type": 1
         }
       },
+<<<<<<< HEAD
       "activeSectionIndex": 6,
+=======
+      "activeSectionIndex": 4,
+>>>>>>> master
       "defaultDrillFilterOtherVisuals": true,
       "linguisticSchemaSyncVersion": 2,
       "settings": {

@@ -2,8 +2,5 @@
 samples/*
 !samples/*.pbit
 !samples/*.vcs
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 __pycache__
