@@ -1,0 +1,3226 @@
+{
+  "name": "125d5a4f-047f-4b8a-8d91-8dc57d71cdd6",
+  "compatibilityLevel": 1520,
+  "createdTimestamp": "2021-01-08T01:00:44.966667+05:30",
+  "lastUpdate": "2021-01-31T11:06:47.06+05:30",
+  "lastSchemaUpdate": "2021-01-08T01:00:44.966667+05:30",
+  "lastProcessed": "2021-01-08T01:18:17.01+05:30",
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "modifiedTime": "2021-01-07T19:30:47.766667",
+    "structureModifiedTime": "2021-01-07T19:30:47.806667",
+    "tables": [
+      {
+        "name": "DateTableTemplate_da348164-1dd9-406d-b650-3574083988ad",
+        "isHidden": true,
+        "isPrivate": true,
+        "modifiedTime": "2021-01-07T19:30:47.783333",
+        "structureModifiedTime": "2021-01-07T19:30:47.783333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.8",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.78",
+              "refreshedTime": "2021-01-07T19:31:15.78"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:15.773333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.78",
+              "refreshedTime": "2021-01-07T19:31:15.78"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:15.783333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:31:15.783333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.786667",
+              "refreshedTime": "2021-01-07T19:31:15.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:15.783333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:31:15.783333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.786667",
+              "refreshedTime": "2021-01-07T19:31:15.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:15.783333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:31:15.783333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.786667",
+              "refreshedTime": "2021-01-07T19:31:15.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:15.786667",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:31:15.786667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.786667",
+              "refreshedTime": "2021-01-07T19:31:15.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:15.79",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:31:15.79",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.79",
+              "refreshedTime": "2021-01-07T19:31:15.79"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:15.786667",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:31:15.786667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:15.786667",
+              "refreshedTime": "2021-01-07T19:31:15.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DateTableTemplate_da348164-1dd9-406d-b650-3574083988ad-e2a04e68-f1d8-40fd-b89e-46794c44e1bc",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:15.773333",
+            "refreshedTime": "2021-01-07T19:31:15.773333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:15.793333",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:31:15.793333",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true",
+            "modifiedTime": "2021-01-07T19:30:47.826667"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy",
+            "modifiedTime": "2021-01-07T19:30:47.826667"
+          }
+        ]
+      },
+      {
+        "name": "Report",
+        "modifiedTime": "2021-01-07T19:30:47.803333",
+        "structureModifiedTime": "2021-01-07T19:30:47.803333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.803333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.956667",
+              "refreshedTime": "2021-01-07T19:48:17.02"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              }
+            ]
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.956667",
+              "refreshedTime": "2021-01-07T19:48:17.016667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              }
+            ]
+          },
+          {
+            "name": "Project Name",
+            "dataType": "string",
+            "sourceColumn": "Project Name",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.956667",
+              "refreshedTime": "2021-01-07T19:48:17.023333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Project Name",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              }
+            ]
+          },
+          {
+            "name": "Attribute",
+            "dataType": "string",
+            "sourceColumn": "Attribute",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.956667",
+              "refreshedTime": "2021-01-07T19:48:17.02"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Attribute",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              }
+            ]
+          },
+          {
+            "name": "Value",
+            "dataType": "double",
+            "sourceColumn": "Value",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.956667",
+              "refreshedTime": "2021-01-07T19:48:17.02"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberDecimal\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Value",
+                "modifiedTime": "2021-01-07T19:30:47.826667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.83"
+              }
+            ]
+          },
+          {
+            "name": "Week",
+            "dataType": "dateTime",
+            "sourceColumn": "Week",
+            "formatString": "mmmm d",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.956667",
+              "refreshedTime": "2021-01-07T19:48:17.02"
+            },
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "0b2dd897-4d5b-4d9b-8b4b-fe5f874c76fa",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_03ddbe92-2f0c-4743-a022-d505c49a0a16",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.83"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1033\" Group=\"MonthDay\" FormatString=\"MMMM d\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.83"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date",
+                "modifiedTime": "2021-01-07T19:30:47.83"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Week",
+                "modifiedTime": "2021-01-07T19:30:47.83"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.83"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2021-01-07T19:30:47.83"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Report-6fa9480f-1682-4266-acb4-74ccaeb6ff98",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:30.883333",
+            "refreshedTime": "2021-01-07T19:48:17.01",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = SharePoint.Files(\"https://intimetecvisionsoft-my.sharepoint.com/personal/madhavi_latha_intimetec_com\", [ApiVersion = 15]),\n    #\"Book xlsx_https://intimetecvisionsoft-my sharepoint com/personal/madhavi_latha_intimetec_com/Documents/Dashboard/\" = Source{[Name=\"Book.xlsx\",#\"Folder Path\"=\"https://intimetecvisionsoft-my.sharepoint.com/personal/madhavi_latha_intimetec_com/Documents/Dashboard/\"]}[Content],\n    #\"Imported Excel\" = Excel.Workbook(#\"Book xlsx_https://intimetecvisionsoft-my sharepoint com/personal/madhavi_latha_intimetec_com/Documents/Dashboard/\"),\n    #\"Expanded Data1\" = Table.ExpandTableColumn(#\"Imported Excel\", \"Data\", {\"Column1\", \"Column2\", \"Column3\", \"Column4\", \"Column5\", \"Column6\", \"Column7\", \"Column8\"}, {\"Data.Column1\", \"Data.Column2\", \"Data.Column3\", \"Data.Column4\", \"Data.Column5\", \"Data.Column6\", \"Data.Column7\", \"Data.Column8\"}),\n    #\"Filtered Rows1\" = Table.SelectRows(#\"Expanded Data1\", each ([Name] = \"Sheet1 (2)\")),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Filtered Rows1\",{\"Item\", \"Kind\", \"Hidden\", \"Name\"}),\n    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Columns\", each ([Data.Column1] <> null)),\n    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Filtered Rows\", [PromoteAllScalars=true]),\n    #\"Unpivoted Other Columns\" = Table.UnpivotOtherColumns(#\"Promoted Headers\", {\"Week\", \"Month\", \"Project Name\"}, \"Attribute\", \"Value\"),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Unpivoted Other Columns\",{{\"Week\", type date}})\nin\n    #\"Changed Type1\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-07T19:30:47.83"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-07T19:30:47.833333"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_03ddbe92-2f0c-4743-a022-d505c49a0a16",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "modifiedTime": "2021-01-07T19:30:47.803333",
+        "structureModifiedTime": "2021-01-07T19:30:47.803333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.803333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.996667",
+              "refreshedTime": "2021-01-07T19:48:17.03"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:30.98",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:30.996667",
+              "refreshedTime": "2021-01-07T19:48:17.033333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:31",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:17.033333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.003333",
+              "refreshedTime": "2021-01-07T19:48:17.036667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:31",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:17.033333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.003333",
+              "refreshedTime": "2021-01-07T19:48:17.036667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:31",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:17.036667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.023333",
+              "refreshedTime": "2021-01-07T19:48:17.036667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:31.026667",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:17.036667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.026667",
+              "refreshedTime": "2021-01-07T19:48:17.04"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:31.03",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:17.043333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.03",
+              "refreshedTime": "2021-01-07T19:48:17.043333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:31.003333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:17.033333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.003333",
+              "refreshedTime": "2021-01-07T19:48:17.036667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_03ddbe92-2f0c-4743-a022-d505c49a0a16-8cbc07e6-246a-4c48-b5b6-419b32b938fe",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:30.98",
+            "refreshedTime": "2021-01-07T19:48:17.026667",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Report'[Week])), 1, 1), Date(Year(MAX('Report'[Week])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:31.033333",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:17.046667",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2021-01-07T19:30:47.833333"
+          }
+        ]
+      },
+      {
+        "name": "Report (2)",
+        "modifiedTime": "2021-01-07T19:30:47.803333",
+        "structureModifiedTime": "2021-01-07T19:30:47.803333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.803333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.85",
+              "refreshedTime": "2021-01-07T19:48:14.746667"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "name": "Week",
+            "dataType": "string",
+            "sourceColumn": "Week",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.85",
+              "refreshedTime": "2021-01-07T19:48:14.746667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Week",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "name": "Project Name",
+            "dataType": "string",
+            "sourceColumn": "Project Name",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.85",
+              "refreshedTime": "2021-01-07T19:48:14.75"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Project Name",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "name": "Attribute",
+            "dataType": "string",
+            "sourceColumn": "Attribute",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.85",
+              "refreshedTime": "2021-01-07T19:48:14.746667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Attribute",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "name": "Attribute.1",
+            "dataType": "string",
+            "sourceColumn": "Attribute.1",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.85",
+              "refreshedTime": "2021-01-07T19:48:14.746667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Attribute.1",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "name": "Value",
+            "dataType": "double",
+            "sourceColumn": "Value",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:31.85",
+              "refreshedTime": "2021-01-07T19:48:14.746667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberDecimal\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Value",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Report (2)-b0493a8a-42ae-41d3-ba0b-53ea400ecbe9",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:31.806667",
+            "refreshedTime": "2021-01-07T19:48:14.74",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = SharePoint.Files(\"https://intimetecvisionsoft-my.sharepoint.com/personal/madhavi_latha_intimetec_com\", [ApiVersion = 15]),\n    #\"Book xlsx_https://intimetecvisionsoft-my sharepoint com/personal/madhavi_latha_intimetec_com/Documents/Dashboard/\" = Source{[Name=\"Book.xlsx\",#\"Folder Path\"=\"https://intimetecvisionsoft-my.sharepoint.com/personal/madhavi_latha_intimetec_com/Documents/Dashboard/\"]}[Content],\n    #\"Imported Excel\" = Excel.Workbook(#\"Book xlsx_https://intimetecvisionsoft-my sharepoint com/personal/madhavi_latha_intimetec_com/Documents/Dashboard/\"),\n    #\"Expanded Data1\" = Table.ExpandTableColumn(#\"Imported Excel\", \"Data\", {\"Column1\", \"Column2\", \"Column3\", \"Column4\", \"Column5\", \"Column6\", \"Column7\", \"Column8\"}, {\"Data.Column1\", \"Data.Column2\", \"Data.Column3\", \"Data.Column4\", \"Data.Column5\", \"Data.Column6\", \"Data.Column7\", \"Data.Column8\"}),\n    #\"Filtered Rows1\" = Table.SelectRows(#\"Expanded Data1\", each [Name] = \"Sheet2\"),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Filtered Rows1\",{\"Item\", \"Kind\", \"Hidden\", \"Name\"}),\n    #\"Filtered Rows\" = Table.SelectRows(#\"Removed Columns\", each ([Data.Column1] <> null)),\n    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Filtered Rows\", [PromoteAllScalars=true]),\n    #\"Removed Columns1\" = Table.RemoveColumns(#\"Promoted Headers\",{\"Column6\", \"Column7\", \"Column8\"}),\n    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Columns1\", {\"Week\", \"Project Name\", \"Attribute\"}, \"Attribute.1\", \"Value\"),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Unpivoted Columns\",{{\"Value\", type number}})\nin\n    #\"Changed Type\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-07T19:30:47.833333"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-07T19:30:47.833333"
+          }
+        ]
+      },
+      {
+        "name": "Sheet1",
+        "modifiedTime": "2021-01-07T19:30:47.803333",
+        "structureModifiedTime": "2021-01-07T19:30:47.803333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.806667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.27",
+              "refreshedTime": "2021-01-07T19:48:13.723333"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              }
+            ]
+          },
+          {
+            "name": "S.No",
+            "dataType": "int64",
+            "sourceColumn": "S.No",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.27",
+              "refreshedTime": "2021-01-07T19:48:13.723333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.833333"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "S.No",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "formatString": "m/d/yy",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.27",
+              "refreshedTime": "2021-01-07T19:48:13.723333"
+            },
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "45e6e3fe-ddcf-42cd-b18a-b26a3e5b13b2",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_5ba3384a-e3ad-4f16-bb9b-9454a2474d51",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1033\" Group=\"ShortDate\" FormatString=\"M/d/yy\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Number Of Participants",
+            "dataType": "int64",
+            "sourceColumn": "Number Of Participants",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.27",
+              "refreshedTime": "2021-01-07T19:48:13.726667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Number Of Participants",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Column4",
+            "dataType": "string",
+            "sourceColumn": "Column4",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.81",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.27",
+              "refreshedTime": "2021-01-07T19:48:13.726667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Column4",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sheet1-ed791944-cb4f-47cd-b4a5-50361995bbdc",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.07",
+            "refreshedTime": "2021-01-07T19:48:13.72",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Excel.Workbook(File.Contents(\"D:\\Simplot\\Dashboards\\Power Hour Partcipants.xlsx\"), null, true),\n    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],\n    #\"Promoted Headers\" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"S.No\", Int64.Type}, {\"Date\", type date}, {\"Number Of Participants\", Int64.Type}})\nin\n    #\"Changed Type\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-07T19:30:47.836667"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-07T19:30:47.836667"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_5ba3384a-e3ad-4f16-bb9b-9454a2474d51",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "modifiedTime": "2021-01-07T19:30:47.806667",
+        "structureModifiedTime": "2021-01-07T19:30:47.806667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.806667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.276667",
+              "refreshedTime": "2021-01-07T19:48:13.733333"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.276667",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.28",
+              "refreshedTime": "2021-01-07T19:48:13.736667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.283333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:13.74",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.29",
+              "refreshedTime": "2021-01-07T19:48:13.75"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.283333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:13.74",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.29",
+              "refreshedTime": "2021-01-07T19:48:13.743333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.286667",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:13.743333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.29",
+              "refreshedTime": "2021-01-07T19:48:13.746667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.293333",
+            "structureModifiedTime": "2021-01-07T19:30:47.81",
+            "refreshedTime": "2021-01-07T19:48:13.746667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.293333",
+              "refreshedTime": "2021-01-07T19:48:13.75"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.293333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "2021-01-07T19:48:13.753333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.296667",
+              "refreshedTime": "2021-01-07T19:48:13.756667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.286667",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "2021-01-07T19:48:13.743333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.29",
+              "refreshedTime": "2021-01-07T19:48:13.743333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_5ba3384a-e3ad-4f16-bb9b-9454a2474d51-4f622dcb-cd5e-4e8b-900e-b3d4262d9133",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.276667",
+            "refreshedTime": "2021-01-07T19:48:13.733333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Sheet1'[Date])), 1, 1), Date(Year(MAX('Sheet1'[Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.3",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.766667",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2021-01-07T19:30:47.836667"
+          }
+        ]
+      },
+      {
+        "name": "Sheet1 (2)",
+        "modifiedTime": "2021-01-07T19:30:47.806667",
+        "structureModifiedTime": "2021-01-07T19:30:47.806667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.806667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.33",
+              "refreshedTime": "2021-01-07T19:48:13.77"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "S.No",
+            "dataType": "int64",
+            "sourceColumn": "S.No",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.366667",
+              "refreshedTime": "2021-01-07T19:48:13.756667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "S.No",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Date2",
+            "dataType": "dateTime",
+            "sourceColumn": "Date2",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.76"
+            },
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "29d6b00f-ae7e-40fe-a135-c9164a2a858f",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_8e636926-fc90-4411-b9d7-3eb4d4c06601",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"LongDate\" FormatString=\"dddd, MMMM d, yyyy\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Date2",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Number Of Participants2",
+            "dataType": "int64",
+            "sourceColumn": "Number Of Participants2",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.77"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Number Of Participants2",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Column4",
+            "dataType": "string",
+            "sourceColumn": "Column4",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.76"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Column4",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "formatString": "mm/dd/yyyy",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.76"
+            },
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "6dc4f819-23ae-424f-84c8-02f6abcb66b0",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_ff1fa0ed-4206-41b1-8247-c825b5ec5702",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1033\" Group=\"ShortDate\" FormatString=\"MM/dd/yyyy\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Date",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Number Of Participants",
+            "dataType": "int64",
+            "sourceColumn": "Number Of Participants",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.76"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Number Of Participants",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Column7",
+            "dataType": "string",
+            "sourceColumn": "Column7",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.76"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Column7",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "Mdate",
+            "dataType": "string",
+            "sourceColumn": "Mdate",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.76"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Mdate",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          },
+          {
+            "name": "MnofPar",
+            "dataType": "double",
+            "sourceColumn": "MnofPar",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-01-07T19:30:47.813333",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.333333",
+              "refreshedTime": "2021-01-07T19:48:13.76"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "MnofPar",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2021-01-07T19:30:47.836667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sheet1 (2)-03cc768c-a569-4508-9748-185831c35806",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.276667",
+            "refreshedTime": "2021-01-07T19:48:13.753333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Excel.Workbook(File.Contents(\"D:\\Simplot\\Dashboards\\Power Hour Partcipants.xlsx\"), null, true),\n    Sheet2_Sheet = Source{[Item=\"Sheet2\",Kind=\"Sheet\"]}[Data],\n    #\"Promoted Headers1\" = Table.PromoteHeaders(Sheet2_Sheet, [PromoteAllScalars=true]),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Promoted Headers1\",{{\"S.No\", Int64.Type}, {\"Date2\", type date}, {\"Number Of Participants2\", Int64.Type}, {\"Column4\", type any}, {\"Date\", type date}, {\"Number Of Participants\", type number}}),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Changed Type1\",{{\"S.No\", Int64.Type}, {\"Date\", type date}, {\"Number Of Participants\", Int64.Type}, {\"MnofPar\", type number}})\nin\n    #\"Changed Type\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-07T19:30:47.84"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-07T19:30:47.84"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_8e636926-fc90-4411-b9d7-3eb4d4c06601",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "modifiedTime": "2021-01-07T19:30:47.806667",
+        "structureModifiedTime": "2021-01-07T19:30:47.806667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.806667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.34",
+              "refreshedTime": "2021-01-07T19:48:13.796667"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.34",
+            "structureModifiedTime": "2021-01-07T19:30:47.813333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.366667",
+              "refreshedTime": "2021-01-07T19:48:13.8"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.366667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.813333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.37",
+              "refreshedTime": "2021-01-07T19:48:13.813333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.366667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.813333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.37",
+              "refreshedTime": "2021-01-07T19:48:13.856667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.37",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.813333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.37",
+              "refreshedTime": "2021-01-07T19:48:13.863333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.373333",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.863333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.373333",
+              "refreshedTime": "2021-01-07T19:48:13.866667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.376667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.866667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.376667",
+              "refreshedTime": "2021-01-07T19:48:13.866667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.37",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.813333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.37",
+              "refreshedTime": "2021-01-07T19:48:13.86"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_8e636926-fc90-4411-b9d7-3eb4d4c06601-58cc59c8-abed-41c2-8531-96114b78114d",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.34",
+            "refreshedTime": "2021-01-07T19:48:13.793333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Sheet1 (2)'[Date2])), 1, 1), Date(Year(MAX('Sheet1 (2)'[Date2])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.39",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.873333",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2021-01-07T19:30:47.84"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_ff1fa0ed-4206-41b1-8247-c825b5ec5702",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "modifiedTime": "2021-01-07T19:30:47.806667",
+        "structureModifiedTime": "2021-01-07T19:30:47.806667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2021-01-07T19:30:47.856667",
+            "structureModifiedTime": "2021-01-07T19:30:47.806667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.39",
+              "refreshedTime": "2021-01-07T19:48:13.8"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.39",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.393333",
+              "refreshedTime": "2021-01-07T19:48:13.796667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.396667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.8",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.406667",
+              "refreshedTime": "2021-01-07T19:48:13.806667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.406667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.81",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.406667",
+              "refreshedTime": "2021-01-07T19:48:13.813333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.406667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.813333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.406667",
+              "refreshedTime": "2021-01-07T19:48:13.813333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.41",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.816667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.41",
+              "refreshedTime": "2021-01-07T19:48:13.816667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.413333",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.82",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.413333",
+              "refreshedTime": "2021-01-07T19:48:13.82"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-01-07T19:31:25.406667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.813333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2021-01-07T19:31:25.406667",
+              "refreshedTime": "2021-01-07T19:48:13.816667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_ff1fa0ed-4206-41b1-8247-c825b5ec5702-2dde6d01-ba5a-4544-b043-23cc8f0c908d",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.39",
+            "refreshedTime": "2021-01-07T19:48:13.793333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Sheet1 (2)'[Date])), 1, 1), Date(Year(MAX('Sheet1 (2)'[Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "state": "ready",
+            "modifiedTime": "2021-01-07T19:31:25.416667",
+            "structureModifiedTime": "2021-01-07T19:30:47.816667",
+            "refreshedTime": "2021-01-07T19:48:13.823333",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "modifiedTime": "2021-01-07T19:30:47.82"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "modifiedTime": "2021-01-07T19:30:47.823333"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2021-01-07T19:30:47.84"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2021-01-07T19:30:47.843333"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "0b2dd897-4d5b-4d9b-8b4b-fe5f874c76fa",
+        "fromTable": "Report",
+        "fromColumn": "Week",
+        "toTable": "LocalDateTable_03ddbe92-2f0c-4743-a022-d505c49a0a16",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2021-01-07T19:31:31.006667",
+        "refreshedTime": "2021-01-07T19:48:17.03"
+      },
+      {
+        "name": "45e6e3fe-ddcf-42cd-b18a-b26a3e5b13b2",
+        "fromTable": "Sheet1",
+        "fromColumn": "Date",
+        "toTable": "LocalDateTable_5ba3384a-e3ad-4f16-bb9b-9454a2474d51",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2021-01-07T19:31:25.28",
+        "refreshedTime": "2021-01-07T19:48:13.733333"
+      },
+      {
+        "name": "29d6b00f-ae7e-40fe-a135-c9164a2a858f",
+        "fromTable": "Sheet1 (2)",
+        "fromColumn": "Date2",
+        "toTable": "LocalDateTable_8e636926-fc90-4411-b9d7-3eb4d4c06601",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2021-01-07T19:31:25.366667",
+        "refreshedTime": "2021-01-07T19:48:13.8"
+      },
+      {
+        "name": "6dc4f819-23ae-424f-84c8-02f6abcb66b0",
+        "fromTable": "Sheet1 (2)",
+        "fromColumn": "Date",
+        "toTable": "LocalDateTable_ff1fa0ed-4206-41b1-8247-c825b5ec5702",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2021-01-07T19:31:25.393333",
+        "refreshedTime": "2021-01-07T19:48:13.796667"
+      },
+      {
+        "name": "dcee3a74-c6a4-459b-ad86-a93ec2b5fdbe",
+        "fromTable": "Sheet1 (2)",
+        "fromColumn": "S.No",
+        "toTable": "Sheet1",
+        "toColumn": "S.No",
+        "state": "ready",
+        "modifiedTime": "2021-01-07T19:31:25.33",
+        "refreshedTime": "2021-01-07T19:48:13.756667"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "en-US",
+        "modifiedTime": "2021-01-07T19:30:47.806667",
+        "structureModifiedTime": "2021-01-07T19:30:47.806667",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "1.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence"
+          },
+          "contentType": "json",
+          "modifiedTime": "2021-01-07T19:30:47.82"
+        }
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": {
+          "__powerbi-vcs-embedded-json__": [
+            "Report",
+            "Report (2)",
+            "Sheet1",
+            "Sheet1 (2)"
+          ]
+        },
+        "modifiedTime": "2021-01-07T19:30:47.843333"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1",
+        "modifiedTime": "2021-01-07T19:30:47.843333"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.88.802.0 (20.12)",
+        "modifiedTime": "2021-01-07T19:30:47.843333"
+      }
+    ]
+  }
+}

@@ -1,4 +1,6 @@
 # only keep *.pbit samples
 samples/*
 !samples/*.pbit
+!samples/*.vcs
+
 __pycache__
