@@ -1,0 +1,1860 @@
+{
+  "name": "f0788a63-a98f-424d-8146-569ea3f2fa39",
+  "compatibilityLevel": 1520,
+  "createdTimestamp": "2017-03-16T02:02:44.743333+05:30",
+  "lastUpdate": "2021-02-02T22:09:46.04+05:30",
+  "lastSchemaUpdate": "2021-01-06T23:07:46.05+05:30",
+  "lastProcessed": "2017-03-16T03:16:30.773333+05:30",
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "modifiedTime": "2021-01-06T17:37:46.216667",
+    "structureModifiedTime": "2021-01-06T17:37:46.24",
+    "tables": [
+      {
+        "name": "DateTableTemplate_7dc176de-8e82-4506-a0e2-71edcc99fa4a",
+        "isHidden": true,
+        "isPrivate": true,
+        "modifiedTime": "2017-03-15T20:32:45.616667",
+        "structureModifiedTime": "2017-03-15T20:32:45.616667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2017-03-15T20:32:45.62",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.86",
+              "refreshedTime": "2017-03-15T20:32:45.86"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.586667"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T20:32:45.86",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.86",
+              "refreshedTime": "2017-03-15T20:32:45.86"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2017-03-15T20:32:45.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T20:32:45.863333",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "2017-03-15T20:32:45.863333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.863333",
+              "refreshedTime": "2017-03-15T20:32:45.863333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T20:32:45.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T20:32:45.863333",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "2017-03-15T20:32:45.863333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.863333",
+              "refreshedTime": "2017-03-15T20:32:45.863333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T20:32:45.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T20:32:45.866667",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "2017-03-15T20:32:45.866667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.866667",
+              "refreshedTime": "2017-03-15T20:32:45.866667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T20:32:45.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T20:32:45.863333",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "2017-03-15T20:32:45.863333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.863333",
+              "refreshedTime": "2017-03-15T20:32:45.863333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T20:32:45.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T20:32:45.87",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "2017-03-15T20:32:45.87",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.87",
+              "refreshedTime": "2017-03-15T20:32:45.87"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T20:32:45.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T20:32:45.863333",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "2017-03-15T20:32:45.863333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T20:32:45.863333",
+              "refreshedTime": "2017-03-15T20:32:45.863333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T20:32:45.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DateTableTemplate_7dc176de-8e82-4506-a0e2-71edcc99fa4a-fd74cec4-f2b6-4aa6-b02a-0bf4f0ee9ae2",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-06T17:37:44.596667",
+            "refreshedTime": "2017-03-15T20:32:45.86",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "state": "ready",
+            "modifiedTime": "2017-03-15T20:32:45.876667",
+            "structureModifiedTime": "2017-03-15T20:32:45.616667",
+            "refreshedTime": "2017-03-15T20:32:45.876667",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2017-03-15T20:32:45.62"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true",
+            "modifiedTime": "2017-03-15T20:32:45.62"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy",
+            "modifiedTime": "2017-03-15T20:32:45.62"
+          }
+        ]
+      },
+      {
+        "name": "Airport Data",
+        "modifiedTime": "2017-03-15T21:16:37.803333",
+        "structureModifiedTime": "2017-03-15T21:46:21.226667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2017-03-15T21:16:37.806667",
+            "structureModifiedTime": "2017-03-15T21:16:37.803333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.81",
+              "refreshedTime": "2017-03-15T21:46:30.81"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "name": "Domestic/International",
+            "dataType": "string",
+            "sourceColumn": "Domestic/International",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:16:40.18",
+            "structureModifiedTime": "2017-03-15T21:16:40.18",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.81",
+              "refreshedTime": "2017-03-15T21:46:30.81"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:16:40.18"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:16:40.353333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:16:41.106667"
+              }
+            ]
+          },
+          {
+            "name": "International Loc",
+            "dataType": "string",
+            "sourceColumn": "International Loc",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:16:40.35",
+            "structureModifiedTime": "2017-03-15T21:16:40.35",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.81",
+              "refreshedTime": "2017-03-15T21:46:30.81"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:16:40.353333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:16:40.473333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:16:41.106667"
+              }
+            ]
+          },
+          {
+            "name": "Airport",
+            "dataType": "string",
+            "sourceColumn": "Airport",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:16:40.473333",
+            "structureModifiedTime": "2017-03-15T21:16:40.473333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.81",
+              "refreshedTime": "2017-03-15T21:46:30.81"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:16:40.473333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:16:40.573333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:16:41.106667"
+              }
+            ]
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Year",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:39.5",
+            "structureModifiedTime": "2017-03-15T21:16:40.573333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.813333",
+              "refreshedTime": "2017-03-15T21:46:30.813333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:19:18.056667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:18:48.456667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:18:48.456667"
+              }
+            ]
+          },
+          {
+            "name": "Departures/arrivals",
+            "dataType": "string",
+            "sourceColumn": "Departures/arrivals",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:16:40.693333",
+            "structureModifiedTime": "2017-03-15T21:16:40.693333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.813333",
+              "refreshedTime": "2017-03-15T21:46:30.813333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:16:40.693333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:16:40.816667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:16:41.106667"
+              }
+            ]
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:42.02",
+            "structureModifiedTime": "2017-03-15T21:16:40.816667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.81",
+              "refreshedTime": "2017-03-15T21:46:30.81"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:16:40.816667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:16:40.95"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:16:41.106667"
+              }
+            ]
+          },
+          {
+            "name": "Passengers",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Passengers",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2017-03-15T21:35:08.74",
+            "structureModifiedTime": "2017-03-15T21:16:40.946667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.813333",
+              "refreshedTime": "2017-03-15T21:46:30.813333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:16:40.95"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:18:48.49"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:18:48.49"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "Date",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:35:14.566667",
+            "structureModifiedTime": "2017-03-15T21:34:32.19",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.81",
+              "refreshedTime": "2017-03-15T21:46:30.81"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.873333"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2017-03-15T21:34:08.873333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"LongDate\" FormatString=\"dddd, MMMM d, yyyy\" /></DateTimes></Format>",
+                "modifiedTime": "2017-03-15T21:34:08.91"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date",
+                "modifiedTime": "2017-03-15T21:34:08.91"
+              }
+            ]
+          },
+          {
+            "name": "Months",
+            "dataType": "string",
+            "sourceColumn": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:46:21.226667",
+            "structureModifiedTime": "2017-03-15T21:46:21.226667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:46:30.813333",
+              "refreshedTime": "2017-03-15T21:46:30.813333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:46:21.226667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:46:21.266667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:46:21.266667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Airport Data-5825d089-18ee-4e1e-80d3-e8f51d273c05",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-06T17:37:46.24",
+            "refreshedTime": "2017-03-15T21:46:30.773333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Folder.Files(\"C:\\Users\\ruthp\\Curbal Blog\\Blog\\For beginners\\airport data\\\"),\n    #\"Filtered Rows\" = Table.SelectRows(Source, each ([Extension] <> \".docx\")),\n    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each not Text.Contains([Name], \"~\")),\n    #\"Filtered Rows2\" = Table.SelectRows(#\"Filtered Rows1\", each ([Name] = \"160114-passagerarfrekvens-per-flygplats-ny.xlsx\" or [Name] = \"170220-passagerarfrekvens-per-flygplats.xlsx\")),\n    #\"Added Custom\" = Table.AddColumn(#\"Filtered Rows2\", \"Custom\", each Excel.Workbook([Content],true)),\n    #\"Expanded Custom\" = Table.ExpandTableColumn(#\"Added Custom\", \"Custom\", {\"Name\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}, {\"Name.1\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}),\n    #\"Filtered Rows3\" = Table.SelectRows(#\"Expanded Custom\", each ([Kind] = \"Sheet\")),\n    #\"Invoked Custom Function\" = Table.AddColumn(#\"Filtered Rows3\", \"fCleanWorkbooks\", each fCleanWorkbooks([Name], [Name.1])),\n    #\"Expanded fCleanWorkbooks\" = Table.ExpandTableColumn(#\"Invoked Custom Function\", \"fCleanWorkbooks\", {\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Month\", \"Passengers\"}, {\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Month\", \"Passengers\"}),\n    #\"Removed Other Columns\" = Table.SelectColumns(#\"Expanded fCleanWorkbooks\",{\"Passengers\", \"Month\", \"Departures/arrivals\", \"Year\", \"Airport\", \"International Loc\", \"Domestic/International\"}),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Removed Other Columns\",{{\"Year\", Int64.Type}, {\"Passengers\", Int64.Type}, {\"Month\", type text}, {\"Departures/arrivals\", type text}, {\"Airport\", type text}, {\"International Loc\", type text}, {\"Domestic/International\", type text}}),\n    #\"Appended Query\" = Table.Combine({#\"Changed Type\", #\"Airport Data CY\"}),\n    #\"Added Custom1\" = Table.AddColumn(#\"Appended Query\", \"Date\", each Number.ToText([Year])&\"-\"&[Month]&\"-01\"),\n    #\"Changed Type with Locale\" = Table.TransformColumnTypes(#\"Added Custom1\", {{\"Date\", type date}}, \"sv-SE\")\nin\n    #\"Changed Type with Locale\""
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Tot Passengers",
+            "expression": "SUM('Airport Data'[Passengers])",
+            "formatString": "0",
+            "dataType": "int64",
+            "modifiedTime": "2017-03-15T21:35:05.206667",
+            "structureModifiedTime": "2017-03-15T21:34:46.496667",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:35:05.203333"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "modifiedTime": "2017-03-15T21:34:08.373333",
+        "structureModifiedTime": "2017-03-15T21:34:08.803333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2017-03-15T21:34:08.376667",
+            "structureModifiedTime": "2017-03-15T21:34:08.373333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:08.426667",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "2db3c4cd-f5df-4a95-b2f9-26cd93b0b86d",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_3f6291db-7fad-4d56-8ab8-8ccaa05e8d8c",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.373333"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2017-03-15T21:34:08.373333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"LongDate\" FormatString=\"dddd, MMMM d, yyyy\" /></DateTimes></Format>",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "DayNo",
+            "dataType": "string",
+            "sourceColumn": "DayNo",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:08.423333",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.466667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Day Name",
+            "dataType": "string",
+            "sourceColumn": "Day Name",
+            "sortByColumn": "SortDayName",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:36:07.67",
+            "structureModifiedTime": "2017-03-15T21:34:08.466667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:36:07.71",
+              "refreshedTime": "2017-03-15T21:36:07.71"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.466667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.503333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Month No",
+            "dataType": "int64",
+            "sourceColumn": "Month No",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:35:49.966667",
+            "structureModifiedTime": "2017-03-15T21:34:08.503333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:35:49.966667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.53"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Month Name",
+            "dataType": "string",
+            "sourceColumn": "Month Name",
+            "sortByColumn": "Month No",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:35:46.83",
+            "structureModifiedTime": "2017-03-15T21:34:08.53",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:35:46.87",
+              "refreshedTime": "2017-03-15T21:35:46.87"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.53"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.553333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Quarter No",
+            "dataType": "int64",
+            "sourceColumn": "Quarter No",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:35:53.126667",
+            "structureModifiedTime": "2017-03-15T21:34:08.553333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.633333",
+              "refreshedTime": "2017-03-15T21:34:17.633333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:35:53.126667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.576667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "WeekNo",
+            "dataType": "int64",
+            "sourceColumn": "WeekNo",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:35:56.193333",
+            "structureModifiedTime": "2017-03-15T21:34:08.576667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:35:56.193333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.603333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:35:58.92",
+            "structureModifiedTime": "2017-03-15T21:34:08.603333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:35:58.92"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.626667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Year-Month",
+            "dataType": "string",
+            "sourceColumn": "Year-Month",
+            "sortByColumn": "SortYearMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:36:12.636667",
+            "structureModifiedTime": "2017-03-15T21:34:08.626667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:36:12.68",
+              "refreshedTime": "2017-03-15T21:36:12.68"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.626667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.65"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Year-Week",
+            "dataType": "string",
+            "sourceColumn": "Year-Week",
+            "sortByColumn": "Sort YearWeek",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:36:17.59",
+            "structureModifiedTime": "2017-03-15T21:34:08.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:36:17.636667",
+              "refreshedTime": "2017-03-15T21:36:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.65"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.67"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Year-Quarter",
+            "dataType": "string",
+            "sourceColumn": "Year-Quarter",
+            "sortByColumn": "SortYearQuarter",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:36:22.033333",
+            "structureModifiedTime": "2017-03-15T21:34:08.67",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:36:22.083333",
+              "refreshedTime": "2017-03-15T21:36:22.083333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.67"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.696667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "SortDayName",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SortDayName",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2017-03-15T21:36:27.436667",
+            "structureModifiedTime": "2017-03-15T21:34:08.696667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.696667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.74"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "SortYearMonth",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SortYearMonth",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2017-03-15T21:36:37.87",
+            "structureModifiedTime": "2017-03-15T21:34:08.74",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.74"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.766667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "Sort YearWeek",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Sort YearWeek",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2017-03-15T21:36:35.05",
+            "structureModifiedTime": "2017-03-15T21:34:08.766667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.766667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.803333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          },
+          {
+            "name": "SortYearQuarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SortYearQuarter",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2017-03-15T21:36:41.496667",
+            "structureModifiedTime": "2017-03-15T21:34:08.803333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.636667",
+              "refreshedTime": "2017-03-15T21:34:17.636667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2017-03-15T21:34:08.803333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.836667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2017-03-15T21:34:08.846667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar-96c9a609-bb95-464a-9ca9-94d7fd062ec9",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-06T17:37:46.24",
+            "refreshedTime": "2017-03-15T21:34:12.643333",
+            "source": {
+              "type": "m",
+              "expression": "let\n\n    Source = List.Dates,\n    #\"Invoke function\" = Source(#date(2015, 01, 01), Duration.Days(DateTime.Date(DateTime.FixedLocalNow())- #date(2015, 01, 01))+1, #duration(1, 0, 0, 0)),\n  \n    #\"List to table\" = Table.FromList(#\"Invoke function\", Splitter.SplitByNothing(), null, null, ExtraValues.Error),\n    \n    Date = Table.RenameColumns(#\"List to table\",{{\"Column1\", \"Date\"}}),\n \n    #\"Day Added\" = Table.AddColumn(Date, \"DayNo\", each Text.PadStart(Number.ToText(Date.Day([Date])),2,\"0\")),\n  \n    #\"Day Name Added\" = Table.AddColumn(#\"Day Added\", \"Day Name\", each Date.ToText([Date],\"ddd\",\"en-US\")),\n    #\"Month No Added\" = Table.AddColumn(#\"Day Name Added\", \"Month No\", each Date.Month([Date])),\n\n    #\"Month Name Added\" = Table.AddColumn(#\"Month No Added\", \"Month Name\", each Date.ToText([Date],\"MMM\",\"en-us\")),\n\n    #\"Quarter No Added\" = Table.AddColumn(#\"Month Name Added\", \"Quarter No\", each Date.QuarterOfYear([Date])),\n\n    #\"EUROPEAN Week No added\" = Table.AddColumn(#\"Quarter No Added\", \"WeekNo\", each Text.PadStart(Number.ToText(Date.WeekOfYear([Date])+1),2,\"0\")),\n\n    #\"Year Added\" = Table.AddColumn(#\"EUROPEAN Week No added\", \"Year\", each Date.Year([Date])),\n\n    #\"Year Month Added\" = Table.AddColumn(#\"Year Added\", \"Year-Month\", each Number.ToText([Year])&\"-\"&[Month Name]),\n    #\"Year Week Added\" = Table.AddColumn(#\"Year Month Added\", \"Year-Week\", each Number.ToText([Year])&\"-\"&[WeekNo]),\n\n    #\"Year Quarter Added\" = Table.AddColumn(#\"Year Week Added\", \"Year-Quarter\", each Number.ToText([Year]) & \"Q\"& Number.ToText([Quarter No],\"00\")),\n\n    #\"Change type to text\" = Table.TransformColumnTypes(#\"Year Quarter Added\",{{\"Year\", Int64.Type}, {\"Date\", type date}, {\"Month No\", Int64.Type},  {\"Day Name\", type text}, {\"Month Name\", type text}, {\"Quarter No\", Int64.Type}, {\"Year-Quarter\", type text}, {\"Year-Month\", type text}, {\"WeekNo\", Int64.Type}}),\n\n    #\"Sort DayName\" = Table.AddColumn(#\"Change type to text\", \"SortDayName\", each Date.DayOfWeek([Date],1)),\n\n    #\"Sort YearMonth\" = Table.AddColumn(#\"Sort DayName\", \"SortYearMonth\", each Number.ToText([Year])&Text.PadStart(Number.ToText([Month No]),2,\"0\")),\n    #\"Sort YearWeek\" = Table.AddColumn(#\"Sort YearMonth\", \"Sort YearWeek\", each Number.ToText([Year])&Text.PadStart(Number.ToText([WeekNo]),2,\"0\")),\n\n    #\"Sort YearQuarter\" = Table.AddColumn(#\"Sort YearWeek\", \"SortYearQuarter\", each Number.ToText([Year])&Text.PadStart(Number.ToText([Quarter No]),2,\"0\")),\n\n    #\"Changed Type to NO\" = Table.TransformColumnTypes(#\"Sort YearQuarter\",{{\"SortYearMonth\", Int64.Type}, {\"SortYearQuarter\", Int64.Type}, {\"SortDayName\", Int64.Type}, {\"Sort YearWeek\", Int64.Type}, {\"Year-Week\", type text}})\nin\n    #\"Changed Type to NO\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_3f6291db-7fad-4d56-8ab8-8ccaa05e8d8c",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "modifiedTime": "2017-03-15T21:34:08.423333",
+        "structureModifiedTime": "2017-03-15T21:34:08.423333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2017-03-15T21:34:08.426667",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.643333",
+              "refreshedTime": "2017-03-15T21:34:17.643333"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:17.643333",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.646667",
+              "refreshedTime": "2017-03-15T21:34:17.646667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:17.653333",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "2017-03-15T21:34:17.653333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.653333",
+              "refreshedTime": "2017-03-15T21:34:17.653333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:17.65",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "2017-03-15T21:34:17.65",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.65",
+              "refreshedTime": "2017-03-15T21:34:17.65"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:17.656667",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "2017-03-15T21:34:17.656667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.656667",
+              "refreshedTime": "2017-03-15T21:34:17.656667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:17.653333",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "2017-03-15T21:34:17.653333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.653333",
+              "refreshedTime": "2017-03-15T21:34:17.653333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:17.656667",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "2017-03-15T21:34:17.656667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.656667",
+              "refreshedTime": "2017-03-15T21:34:17.656667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2017-03-15T21:34:17.65",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "2017-03-15T21:34:17.65",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2017-03-15T21:34:17.65",
+              "refreshedTime": "2017-03-15T21:34:17.65"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2021-01-06T17:37:44.596667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_3f6291db-7fad-4d56-8ab8-8ccaa05e8d8c-158c0437-d30a-478d-b9e9-b65c9eb415a3",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-01-06T17:37:44.596667",
+            "refreshedTime": "2017-03-15T21:34:17.643333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Calendar'[Date])), 1, 1), Date(Year(MAX('Calendar'[Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "state": "ready",
+            "modifiedTime": "2017-03-15T21:34:17.66",
+            "structureModifiedTime": "2017-03-15T21:34:08.423333",
+            "refreshedTime": "2017-03-15T21:34:17.66",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2017-03-15T21:34:08.423333"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2017-03-15T21:34:08.423333"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "2db3c4cd-f5df-4a95-b2f9-26cd93b0b86d",
+        "fromTable": "Calendar",
+        "fromColumn": "Date",
+        "toTable": "LocalDateTable_3f6291db-7fad-4d56-8ab8-8ccaa05e8d8c",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2017-03-15T21:34:17.653333",
+        "refreshedTime": "2017-03-15T21:34:17.653333"
+      },
+      {
+        "name": "29f7633b-7055-47f0-aef8-5f36f2e87648",
+        "fromTable": "Airport Data",
+        "fromColumn": "Date",
+        "toTable": "Calendar",
+        "toColumn": "Date",
+        "state": "ready",
+        "modifiedTime": "2017-03-15T21:46:30.813333",
+        "refreshedTime": "2017-03-15T21:46:30.813333"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "en-US",
+        "modifiedTime": "2021-01-06T17:37:44.586667",
+        "structureModifiedTime": "2021-01-06T17:37:44.586667",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "1.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence"
+          },
+          "contentType": "json",
+          "modifiedTime": "2021-01-06T17:37:44.586667"
+        }
+      }
+    ],
+    "expressions": [
+      {
+        "name": "Airport Data CY",
+        "kind": "m",
+        "expression": "let\n    Source = Folder.Files(\"C:\\Users\\ruthp\\Curbal Blog\\Blog\\For beginners\\airport data\\\"),\n    #\"Filtered Rows\" = Table.SelectRows(Source, each ([Extension] <> \".docx\")),\n    #\"Filtered Rows1\" = Table.SelectRows(#\"Filtered Rows\", each not Text.Contains([Name], \"~\")),\n    #\"Filtered Rows2\" = Table.SelectRows(#\"Filtered Rows1\", each ([Name] = \"170314-passagerarfrekvens-per-flygplats.xlsx\")),\n    #\"Added Custom\" = Table.AddColumn(#\"Filtered Rows2\", \"Custom\", each Excel.Workbook([Content],true)),\n    #\"Expanded Custom\" = Table.ExpandTableColumn(#\"Added Custom\", \"Custom\", {\"Name\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}, {\"Name.1\", \"Data\", \"Item\", \"Kind\", \"Hidden\"}),\n    #\"Filtered Rows3\" = Table.SelectRows(#\"Expanded Custom\", each ([Kind] = \"Sheet\")),\n    #\"Invoked Custom Function\" = Table.AddColumn(#\"Filtered Rows3\", \"fCleanWorkbookCY\", each fCleanWorkbookCY([Name], [Name.1])),\n    #\"Expanded fCleanWorkbookCY\" = Table.ExpandTableColumn(#\"Invoked Custom Function\", \"fCleanWorkbookCY\", {\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Months\", \"Passengers\"}, {\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Months\", \"Passengers\"}),\n    #\"Removed Other Columns\" = Table.SelectColumns(#\"Expanded fCleanWorkbookCY\",{\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Months\", \"Passengers\"}),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Removed Other Columns\",{{\"Passengers\", Int64.Type}, {\"Year\", Int64.Type}, {\"Domestic/International\", type text}, {\"International Loc\", type text}, {\"Airport\", type text}, {\"Departures/arrivals\", type text}, {\"Months\", type text}})\nin\n    #\"Changed Type\"",
+        "modifiedTime": "2021-01-06T17:37:46.24",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      },
+      {
+        "name": "GenericFunction",
+        "kind": "m",
+        "expression": "let\n    Source = Excel.Workbook(File.Contents(\"C:\\Users\\ruthp\\Curbal Blog\\Blog\\For beginners\\airport data\\170220-passagerarfrekvens-per-flygplats.xlsx\"), null, true),\n    Ängelholm_Sheet = Source{[Item=\"Ängelholm\",Kind=\"Sheet\"]}[Data],\n    #\"Changed Type\" = Table.TransformColumnTypes(Ängelholm_Sheet,{{\"Column1\", type any}, {\"Column2\", type text}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type any}, {\"Column6\", type text}, {\"Column7\", type text}, {\"Column8\", type text}, {\"Column9\", type any}, {\"Column10\", type text}, {\"Column11\", type text}, {\"Column12\", type any}, {\"Column13\", type any}, {\"Column14\", type any}, {\"Column15\", type any}, {\"Column16\", type text}, {\"Column17\", type any}, {\"Column18\", type any}, {\"Column19\", type any}, {\"Column20\", type any}, {\"Column21\", type text}, {\"Column22\", type any}, {\"Column23\", type any}, {\"Column24\", type any}, {\"Column25\", type any}, {\"Column26\", type text}, {\"Column27\", type any}, {\"Column28\", type any}, {\"Column29\", type any}, {\"Column30\", type text}, {\"Column31\", type text}, {\"Column32\", type text}, {\"Column33\", type text}, {\"Column34\", type text}, {\"Column35\", type any}, {\"Column36\", type text}, {\"Column37\", type any}, {\"Column38\", type any}, {\"Column39\", type text}, {\"Column40\", type text}, {\"Column41\", type any}, {\"Column42\", type any}, {\"Column43\", type text}, {\"Column44\", type any}}),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column5\", \"Column9\", \"Column7\", \"Column11\", \"Column12\", \"Column13\", \"Column14\", \"Column15\", \"Column17\", \"Column18\", \"Column19\", \"Column20\", \"Column22\", \"Column23\", \"Column24\", \"Column25\", \"Column27\", \"Column28\", \"Column29\", \"Column35\", \"Column37\", \"Column38\", \"Column40\", \"Column41\", \"Column42\", \"Column43\", \"Column44\", \"Column6\"}),\n    #\"Transposed Table\" = Table.Transpose(#\"Removed Columns\"),\n    #\"Removed Columns1\" = Table.RemoveColumns(#\"Transposed Table\",{\"Column1\", \"Column2\", \"Column3\", \"Column4\", \"Column5\", \"Column6\", \"Column8\", \"Column10\", \"Column11\", \"Column12\", \"Column15\", \"Column17\", \"Column31\", \"Column32\", \"Column33\", \"Column30\"}),\n    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns1\", \"Custom\", each if [Column13]=\"Inrikes\" then \"Inrikes\" else [Column14]),\n    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Custom\",{\"Column7\", \"Column9\", \"Column13\", \"Column14\", \"Column16\", \"Custom\", \"Column18\", \"Column19\", \"Column20\", \"Column21\", \"Column22\", \"Column23\", \"Column24\", \"Column25\", \"Column26\", \"Column27\", \"Column28\", \"Column29\"}),\n    #\"Removed Columns2\" = Table.RemoveColumns(#\"Reordered Columns\",{\"Column14\"}),\n    #\"Filled Down\" = Table.FillDown(#\"Removed Columns2\",{\"Column7\", \"Column9\", \"Column13\", \"Custom\"}),\n    #\"Filtered Rows\" = Table.SelectRows(#\"Filled Down\", each ([Custom] <> \"Summa\" and [Custom] <> \"Totalt utrikes\") and ([Column16] <> \"Summa\")),\n    #\"Removed Top Rows\" = Table.Skip(#\"Filtered Rows\",2),\n    #\"Added Custom1\" = Table.AddColumn(#\"Removed Top Rows\", \"Custom.1\", each if [Column13]=null then \"Airport\" else [Column9]),\n    #\"Added Custom2\" = Table.AddColumn(#\"Added Custom1\", \"Custom.2\", each if [Column13]=null then \"Year\" else [Column7]),\n    #\"Removed Columns3\" = Table.RemoveColumns(#\"Added Custom2\",{\"Column7\", \"Column9\"}),\n    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Removed Columns3\", [PromoteAllScalars=true]),\n    #\"Removed Top Rows1\" = Table.Skip(#\"Promoted Headers\",1),\n    #\"Added Index\" = Table.AddIndexColumn(#\"Removed Top Rows1\", \"Index\", 0, 1),\n    #\"Added Custom3\" = Table.AddColumn(#\"Added Index\", \"Custom\", each if Number.IsOdd([Index]) then \"Ank\" else \"Avg\"),\n    #\"Removed Columns4\" = Table.RemoveColumns(#\"Added Custom3\",{\"Column2\", \"Index\"}),\n    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Columns4\", {\"Column1\", \"Column3\", \"Airport\", \"Year\", \"Custom\"}, \"Attribute\", \"Value\"),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Unpivoted Columns\",{{\"Value\", type text}}),\n    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type1\",\" \",\"\",Replacer.ReplaceText,{\"Value\"}),\n    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Value\", Int64.Type}}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type2\",{{\"Column1\", \"Domestic/International\"}, {\"Column3\", \"International Loc\"}, {\"Custom\", \"Departures/arrivals\"}, {\"Attribute\", \"Month\"}, {\"Value\", \"Passengers\"}})\nin\n    #\"Renamed Columns\"",
+        "modifiedTime": "2021-01-06T17:37:46.24",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      },
+      {
+        "name": "AllArportsOneYear",
+        "kind": "m",
+        "expression": "let\n    Source = Excel.Workbook(File.Contents(\"C:\\Users\\ruthp\\Curbal Blog\\Blog\\For beginners\\airport data\\170220-passagerarfrekvens-per-flygplats.xlsx\"), null, true),\n    #\"Filtered Rows\" = Table.SelectRows(Source, each ([Kind] = \"Sheet\")),\n    #\"Invoked Custom Function\" = Table.AddColumn(#\"Filtered Rows\", \"fCleanWorksheets\", each fCleanWorksheets([Name])),\n    #\"Expanded fCleanWorksheets\" = Table.ExpandTableColumn(#\"Invoked Custom Function\", \"fCleanWorksheets\", {\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Month\", \"Passengers\"}, {\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Month\", \"Passengers\"}),\n    #\"Removed Other Columns\" = Table.SelectColumns(#\"Expanded fCleanWorksheets\",{\"Domestic/International\", \"International Loc\", \"Airport\", \"Year\", \"Departures/arrivals\", \"Month\", \"Passengers\"}),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Removed Other Columns\",{{\"Year\", Int64.Type}, {\"Passengers\", Int64.Type}, {\"Month\", type text}, {\"Departures/arrivals\", type text}, {\"Airport\", type text}, {\"Domestic/International\", type text}, {\"International Loc\", type text}})\nin\n    #\"Changed Type\"",
+        "modifiedTime": "2021-01-06T17:37:46.24",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      },
+      {
+        "name": "fCleanWorksheets",
+        "kind": "m",
+        "expression": "(city)=>\nlet\n    Source = Excel.Workbook(File.Contents(\"C:\\Users\\ruthp\\Curbal Blog\\Blog\\For beginners\\airport data\\170220-passagerarfrekvens-per-flygplats.xlsx\"), null, true),\n    Ängelholm_Sheet = Source{[Item=city,Kind=\"Sheet\"]}[Data],\n    #\"Changed Type\" = Table.TransformColumnTypes(Ängelholm_Sheet,{{\"Column1\", type any}, {\"Column2\", type text}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type any}, {\"Column6\", type text}, {\"Column7\", type text}, {\"Column8\", type text}, {\"Column9\", type any}, {\"Column10\", type text}, {\"Column11\", type text}, {\"Column12\", type any}, {\"Column13\", type any}, {\"Column14\", type any}, {\"Column15\", type any}, {\"Column16\", type text}, {\"Column17\", type any}, {\"Column18\", type any}, {\"Column19\", type any}, {\"Column20\", type any}, {\"Column21\", type text}, {\"Column22\", type any}, {\"Column23\", type any}, {\"Column24\", type any}, {\"Column25\", type any}, {\"Column26\", type text}, {\"Column27\", type any}, {\"Column28\", type any}, {\"Column29\", type any}, {\"Column30\", type text}, {\"Column31\", type text}, {\"Column32\", type text}, {\"Column33\", type text}, {\"Column34\", type text}, {\"Column35\", type any}, {\"Column36\", type text}, {\"Column37\", type any}, {\"Column38\", type any}, {\"Column39\", type text}, {\"Column40\", type text}, {\"Column41\", type any}, {\"Column42\", type any}, {\"Column43\", type text}, {\"Column44\", type any}}),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column5\", \"Column9\", \"Column7\", \"Column11\", \"Column12\", \"Column13\", \"Column14\", \"Column15\", \"Column17\", \"Column18\", \"Column19\", \"Column20\", \"Column22\", \"Column23\", \"Column24\", \"Column25\", \"Column27\", \"Column28\", \"Column29\", \"Column35\", \"Column37\", \"Column38\", \"Column40\", \"Column41\", \"Column42\", \"Column43\", \"Column44\", \"Column6\"}),\n    #\"Transposed Table\" = Table.Transpose(#\"Removed Columns\"),\n    #\"Removed Columns1\" = Table.RemoveColumns(#\"Transposed Table\",{\"Column1\", \"Column2\", \"Column3\", \"Column4\", \"Column5\", \"Column6\", \"Column8\", \"Column10\", \"Column11\", \"Column12\", \"Column15\", \"Column17\", \"Column31\", \"Column32\", \"Column33\", \"Column30\"}),\n    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns1\", \"Custom\", each if [Column13]=\"Inrikes\" then \"Inrikes\" else [Column14]),\n    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Custom\",{\"Column7\", \"Column9\", \"Column13\", \"Column14\", \"Column16\", \"Custom\", \"Column18\", \"Column19\", \"Column20\", \"Column21\", \"Column22\", \"Column23\", \"Column24\", \"Column25\", \"Column26\", \"Column27\", \"Column28\", \"Column29\"}),\n    #\"Removed Columns2\" = Table.RemoveColumns(#\"Reordered Columns\",{\"Column14\"}),\n    #\"Filled Down\" = Table.FillDown(#\"Removed Columns2\",{\"Column7\", \"Column9\", \"Column13\", \"Custom\"}),\n    #\"Filtered Rows\" = Table.SelectRows(#\"Filled Down\", each ([Custom] <> \"Summa\" and [Custom] <> \"Totalt utrikes\") and ([Column16] <> \"Summa\")),\n    #\"Removed Top Rows\" = Table.Skip(#\"Filtered Rows\",2),\n    #\"Added Custom1\" = Table.AddColumn(#\"Removed Top Rows\", \"Custom.1\", each if [Column13]=null then \"Airport\" else [Column9]),\n    #\"Added Custom2\" = Table.AddColumn(#\"Added Custom1\", \"Custom.2\", each if [Column13]=null then \"Year\" else [Column7]),\n    #\"Removed Columns3\" = Table.RemoveColumns(#\"Added Custom2\",{\"Column7\", \"Column9\"}),\n    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Removed Columns3\", [PromoteAllScalars=true]),\n    #\"Removed Top Rows1\" = Table.Skip(#\"Promoted Headers\",1),\n    #\"Added Index\" = Table.AddIndexColumn(#\"Removed Top Rows1\", \"Index\", 0, 1),\n    #\"Added Custom3\" = Table.AddColumn(#\"Added Index\", \"Custom\", each if Number.IsOdd([Index]) then \"Ank\" else \"Avg\"),\n    #\"Removed Columns4\" = Table.RemoveColumns(#\"Added Custom3\",{\"Column2\", \"Index\"}),\n    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Columns4\", {\"Column1\", \"Column3\", \"Airport\", \"Year\", \"Custom\"}, \"Attribute\", \"Value\"),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Unpivoted Columns\",{{\"Value\", type text}}),\n    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type1\",\" \",\"\",Replacer.ReplaceText,{\"Value\"}),\n    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Value\", Int64.Type}}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type2\",{{\"Column1\", \"Domestic/International\"}, {\"Column3\", \"International Loc\"}, {\"Custom\", \"Departures/arrivals\"}, {\"Attribute\", \"Month\"}, {\"Value\", \"Passengers\"}})\nin\n    #\"Renamed Columns\"",
+        "modifiedTime": "2021-01-06T17:37:46.24",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      },
+      {
+        "name": "fCleanWorkbooks",
+        "kind": "m",
+        "expression": "(name, city)=>\nlet\n    Source = Excel.Workbook(File.Contents(\"C:\\Users\\ruthp\\Curbal Blog\\Blog\\For beginners\\airport data\\\"&name), null, true),\n    Ängelholm_Sheet = Source{[Item=city,Kind=\"Sheet\"]}[Data],\n    #\"Changed Type\" = Table.TransformColumnTypes(Ängelholm_Sheet,{{\"Column1\", type any}, {\"Column2\", type text}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type any}, {\"Column6\", type text}, {\"Column7\", type text}, {\"Column8\", type text}, {\"Column9\", type any}, {\"Column10\", type text}, {\"Column11\", type text}, {\"Column12\", type any}, {\"Column13\", type any}, {\"Column14\", type any}, {\"Column15\", type any}, {\"Column16\", type text}, {\"Column17\", type any}, {\"Column18\", type any}, {\"Column19\", type any}, {\"Column20\", type any}, {\"Column21\", type text}, {\"Column22\", type any}, {\"Column23\", type any}, {\"Column24\", type any}, {\"Column25\", type any}, {\"Column26\", type text}, {\"Column27\", type any}, {\"Column28\", type any}, {\"Column29\", type any}, {\"Column30\", type text}, {\"Column31\", type text}, {\"Column32\", type text}, {\"Column33\", type text}, {\"Column34\", type text}, {\"Column35\", type any}, {\"Column36\", type text}, {\"Column37\", type any}, {\"Column38\", type any}, {\"Column39\", type text}, {\"Column40\", type text}, {\"Column41\", type any}, {\"Column42\", type any}, {\"Column43\", type text}, {\"Column44\", type any}}),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column5\", \"Column9\", \"Column7\", \"Column11\", \"Column12\", \"Column13\", \"Column14\", \"Column15\", \"Column17\", \"Column18\", \"Column19\", \"Column20\", \"Column22\", \"Column23\", \"Column24\", \"Column25\", \"Column27\", \"Column28\", \"Column29\", \"Column35\", \"Column37\", \"Column38\", \"Column40\", \"Column41\", \"Column42\", \"Column43\", \"Column44\", \"Column6\"}),\n    #\"Transposed Table\" = Table.Transpose(#\"Removed Columns\"),\n    #\"Removed Columns1\" = Table.RemoveColumns(#\"Transposed Table\",{\"Column1\", \"Column2\", \"Column3\", \"Column4\", \"Column5\", \"Column6\", \"Column8\", \"Column10\", \"Column11\", \"Column12\", \"Column15\", \"Column17\", \"Column31\", \"Column32\", \"Column33\", \"Column30\"}),\n    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns1\", \"Custom\", each if [Column13]=\"Inrikes\" then \"Inrikes\" else [Column14]),\n    #\"Reordered Columns\" = Table.ReorderColumns(#\"Added Custom\",{\"Column7\", \"Column9\", \"Column13\", \"Column14\", \"Column16\", \"Custom\", \"Column18\", \"Column19\", \"Column20\", \"Column21\", \"Column22\", \"Column23\", \"Column24\", \"Column25\", \"Column26\", \"Column27\", \"Column28\", \"Column29\"}),\n    #\"Removed Columns2\" = Table.RemoveColumns(#\"Reordered Columns\",{\"Column14\"}),\n    #\"Filled Down\" = Table.FillDown(#\"Removed Columns2\",{\"Column7\", \"Column9\", \"Column13\", \"Custom\"}),\n    #\"Filtered Rows\" = Table.SelectRows(#\"Filled Down\", each ([Custom] <> \"Summa\" and [Custom] <> \"Totalt utrikes\") and ([Column16] <> \"Summa\")),\n    #\"Removed Top Rows\" = Table.Skip(#\"Filtered Rows\",2),\n    #\"Added Custom1\" = Table.AddColumn(#\"Removed Top Rows\", \"Custom.1\", each if [Column13]=null then \"Airport\" else [Column9]),\n    #\"Added Custom2\" = Table.AddColumn(#\"Added Custom1\", \"Custom.2\", each if [Column13]=null then \"Year\" else [Column7]),\n    #\"Removed Columns3\" = Table.RemoveColumns(#\"Added Custom2\",{\"Column7\", \"Column9\"}),\n    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Removed Columns3\", [PromoteAllScalars=true]),\n    #\"Removed Top Rows1\" = Table.Skip(#\"Promoted Headers\",1),\n    #\"Added Index\" = Table.AddIndexColumn(#\"Removed Top Rows1\", \"Index\", 0, 1),\n    #\"Added Custom3\" = Table.AddColumn(#\"Added Index\", \"Custom\", each if Number.IsOdd([Index]) then \"Ank\" else \"Avg\"),\n    #\"Removed Columns4\" = Table.RemoveColumns(#\"Added Custom3\",{\"Column2\", \"Index\"}),\n    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Columns4\", {\"Column1\", \"Column3\", \"Airport\", \"Year\", \"Custom\"}, \"Attribute\", \"Value\"),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Unpivoted Columns\",{{\"Value\", type text}}),\n    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type1\",\" \",\"\",Replacer.ReplaceText,{\"Value\"}),\n    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Value\", Int64.Type}}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type2\",{{\"Column1\", \"Domestic/International\"}, {\"Column3\", \"International Loc\"}, {\"Custom\", \"Departures/arrivals\"}, {\"Attribute\", \"Month\"}, {\"Value\", \"Passengers\"}})\nin\n    #\"Renamed Columns\"",
+        "modifiedTime": "2021-01-06T17:37:46.24",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      },
+      {
+        "name": "fCleanWorkbookCY",
+        "kind": "m",
+        "expression": "(name, city)=>\nlet\n    Source = Excel.Workbook(Web.Contents(\"C:\\Users\\ruthp\\Curbal Blog\\Blog\\For beginners\\airport data\\\" & name), null, true),\n    Ängelholm_Sheet = Source{[Item=city,Kind=\"Sheet\"]}[Data],\n    #\"Changed Type\" = Table.TransformColumnTypes(Ängelholm_Sheet,{{\"Column1\", type any}, {\"Column2\", type text}, {\"Column3\", type text}, {\"Column4\", type text}, {\"Column5\", type any}, {\"Column6\", type text}, {\"Column7\", type text}, {\"Column8\", type text}, {\"Column9\", type any}, {\"Column10\", type text}, {\"Column11\", type text}, {\"Column12\", type any}, {\"Column13\", type any}, {\"Column14\", type any}, {\"Column15\", type any}, {\"Column16\", type text}, {\"Column17\", type any}, {\"Column18\", type any}, {\"Column19\", type any}, {\"Column20\", type any}, {\"Column21\", type text}, {\"Column22\", type any}, {\"Column23\", type any}, {\"Column24\", type any}, {\"Column25\", type any}, {\"Column26\", type text}, {\"Column27\", type any}, {\"Column28\", type any}, {\"Column29\", type any}, {\"Column30\", type text}, {\"Column31\", type text}, {\"Column32\", type text}, {\"Column33\", type text}, {\"Column34\", type text}, {\"Column35\", type any}, {\"Column36\", type text}, {\"Column37\", type any}, {\"Column38\", type any}, {\"Column39\", type text}, {\"Column40\", type text}, {\"Column41\", type any}, {\"Column42\", type any}, {\"Column43\", type text}, {\"Column44\", type any}}),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column5\", \"Column9\", \"Column7\", \"Column11\", \"Column12\", \"Column13\", \"Column14\", \"Column15\", \"Column17\", \"Column18\", \"Column19\", \"Column20\", \"Column22\", \"Column23\", \"Column24\", \"Column25\", \"Column27\", \"Column28\", \"Column29\", \"Column35\", \"Column37\", \"Column38\", \"Column40\", \"Column41\", \"Column42\", \"Column43\", \"Column44\", \"Column6\"}),\n    #\"Transposed Table\" = Table.Transpose(#\"Removed Columns\"),\n    #\"Removed Columns1\" = Table.RemoveColumns(#\"Transposed Table\",{\"Column1\", \"Column2\", \"Column3\", \"Column4\", \"Column5\", \"Column6\", \"Column8\", \"Column10\", \"Column11\", \"Column12\", \"Column15\", \"Column17\"}),\n    #\"Added Custom\" = Table.AddColumn(#\"Removed Columns1\", \"Custom\", each if [Column13]=\"Inrikes\" then \"Inrikes\" else [Column14]),\n    #\"Removed Columns2\" = Table.RemoveColumns(#\"Added Custom\",{\"Column14\"}),\n    #\"Filled Down\" = Table.FillDown(#\"Removed Columns2\",{\"Column7\", \"Column9\"}),\n    #\"Removed Top Rows\" = Table.Skip(#\"Filled Down\",1),\n    #\"Filled Down1\" = Table.FillDown(#\"Removed Top Rows\",{\"Column13\", \"Custom\"}),\n    #\"Filtered Rows\" = Table.SelectRows(#\"Filled Down1\", each ([Custom] <> \"Summa\" and [Custom] <> \"Totalt utrikes\") and ([Column16] <> \"Summa\")),\n    #\"Removed Top Rows1\" = Table.Skip(#\"Filtered Rows\",1),\n    #\"Added Custom1\" = Table.AddColumn(#\"Removed Top Rows1\", \"Custom.1\", each if [Column13]=null then \"Airport\" else [Column9]),\n    #\"Added Custom3\" = Table.AddColumn(#\"Added Custom1\", \"Custom.2\", each if [Column13] = null then \"Year\" else [Column7] ),\n    #\"Removed Columns3\" = Table.RemoveColumns(#\"Added Custom3\",{\"Column9\", \"Column7\"}),\n    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Removed Columns3\", [PromoteAllScalars=true]),\n    #\"Removed Top Rows2\" = Table.Skip(#\"Promoted Headers\",1),\n    #\"Added Index\" = Table.AddIndexColumn(#\"Removed Top Rows2\", \"Index\", 0, 1),\n    #\"Added Custom2\" = Table.AddColumn(#\"Added Index\", \"Custom\", each if Number.IsOdd([Index]) then \"Ank\" else \"Avg\"),\n    #\"Removed Columns4\" = Table.RemoveColumns(#\"Added Custom2\",{\"Index\", \"Column2\", \"Column6\", \"Column7\", \"Column8\", \"Summa\"}),\n    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Columns4\", {\"Column1\", \"Column9\", \"Airport\", \"Year\", \"Custom\"}, \"Attribute\", \"Value\"),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Unpivoted Columns\",{{\"Value\", type text}}),\n    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type1\",\" \",\"\",Replacer.ReplaceText,{\"Value\"}),\n    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Replaced Value\",{{\"Value\", Int64.Type}}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Changed Type2\",{{\"Column9\", \"International Loc\"}, {\"Custom\", \"Departures/arrivals\"}, {\"Column1\", \"Domestic/International\"}, {\"Value\", \"Passengers\"}, {\"Attribute\", \"Months\"}})\nin\n    #\"Renamed Columns\"",
+        "modifiedTime": "2021-01-06T17:37:46.24",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Function",
+            "modifiedTime": "2021-01-06T17:37:46.24"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1",
+        "modifiedTime": "2017-03-15T20:32:45.62"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.88.802.0 (20.12)",
+        "modifiedTime": "2021-01-06T17:37:44.596667"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": {
+          "__powerbi-vcs-embedded-json__": [
+            "Airport Data",
+            "Airport Data CY",
+            "GenericFunction",
+            "AllArportsOneYear",
+            "fCleanWorksheets",
+            "fCleanWorkbooks",
+            "fCleanWorkbookCY",
+            "Calendar"
+          ]
+        },
+        "modifiedTime": "2021-01-06T17:37:46.24"
+      }
+    ]
+  }
+}

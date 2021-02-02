@@ -1,0 +1,19 @@
+{
+  "Version": 0,
+  "Data": [
+    {
+      "TableKey": "Tables\\f1023650-ef68-4ba9-ac64-67196bc68925",
+      "Height": 357.3333333333333,
+      "Width": 200,
+      "Left": 0,
+      "Top": 0
+    },
+    {
+      "TableKey": "Tables\\2636fbf1-1b1b-444f-8243-16cf611bb044",
+      "Height": 150,
+      "Width": 200,
+      "Left": 329.9038105676658,
+      "Top": 0
+    }
+  ]
+}
